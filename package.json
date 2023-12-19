@@ -6,13 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "watch": "vite build --watch",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.11"
+    "font-awesome": "^4.7.0",
+    "vue": "^3.3.11",
+    "vue-markdown-render": "^2.1.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
+    "sass": "^1.69.5",
     "vite": "^5.0.8"
   }
 }

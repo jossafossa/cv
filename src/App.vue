@@ -1,7 +1,122 @@
 <script setup>
-import data from "@/assets/data.json";
+import data from "@/assets/data.js";
+import VueMarkdown from "vue-markdown-render";
 </script>
 
-<template></template>
+<template>
+  <div style="overflow-x: hidden">
+    <header class="header">
+      <div class="container header__inner">
+        <div class="header__left">
+          <div class="header__photo">
+            <img src="@/assets/img/jossafossa.jpg" alt="Joost Hobma" />
+          </div>
+          <div class="header__content hor-center">
+            <h1>{{ data.name }}</h1>
+            <div class="key-value">
+              <div>{{ data.linksLabel }}</div>
 
-<style scoped></style>
+              <a v-for="link in data.links" :href="link.url" class="marked">
+                {{ link.label }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header__information">
+          <table class="fancy condensed">
+            <tr v-for="contact in data.contactInfo">
+              <td>{{ contact.label }}</td>
+              <td>{{ contact.value }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+    <template v-for="section in data.sections">
+      <section v-if="section.type === 'content'" id="about">
+        <div class="container small">
+          <h1 class="line-left">{{ section.title }}</h1>
+          <div class="text-container">
+            <vue-markdown :source="section.content"></vue-markdown>
+          </div>
+        </div>
+      </section>
+      <section v-if="section.type === 'educations'" class="bg-dark">
+        <div class="container no-padding">
+          <h1 class="section-title">{{ section.title }}</h1>
+          <div class="timeline">
+            <div class="timeline__items">
+              <div class="timeline__item" v-for="item in section.educations">
+                <header class="timeline__item__header">
+                  <div class="timeline__item__title">{{ item.title }}</div>
+                  <div class="timeline__item__date">{{ item.time }}</div>
+                </header>
+                <table class="timeline__item__content">
+                  <tr v-for="(value, key) in item.attributes">
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section v-if="section.type === 'attributes'">
+        <div class="container">
+          <div class="row">
+            <div id="skills" class="stretch">
+              <h1 class="line-left">{{ section.skills.title }}</h1>
+              <div class="skills-container">
+                <div class="skill-table" v-for="skill in section.skills.skills">
+                  <div class="skill-table__title">{{ skill.title }}</div>
+                  <div class="skill-table__content">
+                    <div class="skill-table__row" v-for="item in skill.items">
+                      <div>{{ item.label }}</div>
+                      <div :value="item.rating" class="rating">
+                        <i v-for="index in item.rating" class="fa fa-star"></i>
+                      </div>
+                      <div class="suffix">{{ item.suffix }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="small">
+              <div id="qualities">
+                <h1 class="line-right">{{ section.qualities.title }}</h1>
+                <div class="qualities">
+                  <div
+                    class="qualities__row"
+                    v-for="item in section.qualities.items"
+                  >
+                    <i :class="['fa', item.icon]"></i>
+                    <div>{{ item.label }}</div>
+                  </div>
+                </div>
+              </div>
+              <div id="interests">
+                <h1 class="line-right">{{ section.interests.title }}</h1>
+                <div class="interests-container">
+                  <div class="marked" v-for="item in section.interests.items">
+                    <i v-if="item.icon" :class="['fa', item.icon]"></i>
+                    {{ item.label }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+    <footer class="bg-dark">
+      <div class="container">
+        <p>{{ data.footer.label }}</p>
+      </div>
+    </footer>
+  </div>
+</template>
+
+<style lang="scss">
+@import "@/assets/css/style.scss";
+</style>
