@@ -1,0 +1,80 @@
+{
+  "name": "JOOST HOBMA",
+  "image": "https://www.jossafossa.nl/CV/img/1666973707109.jpg",
+  "linksLabel": "Portfolio:",
+  "links": [
+    {
+      "url": "https://www.jossafossa.nl",
+      "label": "jossafossa.nl"
+    },
+    {
+      "url": "https://codepen.io/Jossafossa",
+      "label": "codepen.io"
+    }
+  ],
+  "sections": [
+    {
+      "type": "content",
+      "title": "Over mij",
+      "content": "Hoi, Ik ben Joost. Sinds 2015 heb ik bij verschillende Webdesign bureaus gewerkt. Ik heb veel ervaring met custom wordpress websites bouwen. Mijn focus ligt voornamelijk op frontend techniek. Ik heb veel ervaring met SCSS/CSS, semantische HTML5 en es6 JavaScript. Daarnaast heb ik gewerkt met de CSS frameworks bootstrap en foundation. Naast frontend techniek heb ik ook meerdere backend projecten gedraaid en heb ik ervaring met moderne PHP. Ik vind het belangrijk om leesbare, moderne en efficiente code te schrijven. Naast mijn werk ben ik ook veel bezig met webdevelopment. Zo heb ik mee gedaan aan een paar Hackatons en gamejams. In persoonlijke projecten heb ik gewerkt met VueJS en react en bouw ik regelmatig eigen libraries in plain JavaScript. Deze projecten zijn te zien op mijn Codepen account en mijn portfolio"
+    },
+    {
+      "type": "educations",
+      "title": "Opleidingen",
+      "educations": [
+        {
+          "title": "HBO-ICT",
+          "attributes": {
+            "School": "Hanze Hogeschool Groningen",
+            "locatie": "Groningen",
+            "specialisatie": "Software Engineering"
+          },
+          "time": "sep `17 - aug `20"
+        },
+        {
+          "title": "Mediavormgeving",
+          "attributes": {
+            "School": "Friesland College",
+            "locatie": "Heerenveen",
+            "specialisatie": "Interactief",
+            "niveau": "MBO 4"
+          },
+          "time": "Feb `14 - Juli `17"
+        }
+      ]
+    },
+    {
+      "type": "educations",
+      "title": "Werkervaring",
+      "educations": [
+        {
+          "title": "Full-stack Developer",
+          "attributes": {
+            "Bedrijf": "B2DESIGN",
+            "locatie": "Groningen",
+            "specialisatie": "Frontend"
+          },
+          "time": "Aug `20 - Nu"
+        },
+        {
+          "title": "Frontend Developer",
+          "attributes": {
+            "Bedrijf": "Burst",
+            "locatie": "Groningen",
+            "specialisatie": "Frontend"
+          },
+          "time": "Feb `19 - heden"
+        },
+        {
+          "title": "Frontend Developer",
+          "attributes": {
+            "Bedrijf": "Burst",
+            "locatie": "Groningen",
+            "specialisatie": "Frontend"
+          },
+          "time": "Feb `19 - heden"
+        }
+      ]
+    }
+  ]
+}
