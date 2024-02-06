@@ -52,7 +52,7 @@ import VueMarkdown from "vue-markdown-render";
                   <div class="timeline__item__date">{{ item.time }}</div>
                 </header>
                 <table class="timeline__item__content">
-                  <tr v-for="(key, value) in item.attributes">
+                  <tr v-for="(value, key) in item.attributes">
                     <td>{{ key }}</td>
                     <td>{{ value }}</td>
                   </tr>
