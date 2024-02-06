@@ -51,11 +51,11 @@ Naast webdevelopment ben ik ook een groot fan van **pixelart** en **game develop
 - Ik houd van **semantisch kloppende HTML en CSS**.
 - Ik houd van duidelijke **coding standards**.
 - Ik houd van \`var()\`, \`flexbox\`, \`grid\`, \`gaps\`, \`:has()\`, \`:where()\`, \`<dialog>\`, \`async\`, \`await\`, \`import()\`, \`Promises\`, \`?.\`, \`...\` & \`const\`. 
-- Ik houd van een efficiente en consistente workflow.
+- Ik houd van een efficiënte en consistente workflow.
 - Ik houd van consistente user interfaces.
 - Ik houd een **gebruiksvriendelijke** backend. 
 - Ik houd van andere **mensen helpen** en **kennis delen**.
-- Ik houd van duidelijke **effiëcient communicatie**.
+- Ik houd van duidelijke **efficiënt communicatie**.
 
 `,
     },
