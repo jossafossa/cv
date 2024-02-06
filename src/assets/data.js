@@ -34,9 +34,29 @@ export default {
       type: "content",
       title: "Over mij",
       content: `
-Hoi, Ik ben Joost, een **full-stack** developer uit Friesland maar gehuisvest in Groningen. Ik ben al sinds 2016 werkzaam bij verschillende bedrijven in de webdevelopment land. Ik heb veel ervaring met het bouwen van custom **Wordpress** Thema's bouwen. Van frontend tot backend, van statische content tot **Webshops**, **Configurators**, **API koppelingen** en **Plugins** bouwen. Als ik thuis ben slinger ik meestal meteen de computer aan om thuis verder te werken aan mijn eigen projecten. Ik raak niet snel uitgekeken op het webdevelopment vak en ben altijd opzoek naar nieuwe dingen om te bouwen.
+Hoi, Ik ben Joost, een **full-stack** developer uit Friesland maar gehuisvest in Groningen. Ik ben al sinds 2016 werkzaam bij verschillende bedrijven in webdevelopment land. Ik heb veel ervaring met het bouwen van custom **Wordpress** Thema's van frontend tot backend, van statische content tot **Webshops**, **Configurators**, **API koppelingen** en **Plugins** bouwen. Dit is niet alleen Wordpress specifieke kennis maar ook veel **Javascript** (custom, **VueJS**, **React**), **SCSS**, **PHP** en **HTML**. Als ik thuis ben slinger ik meestal meteen de computer aan om thuis verder te werken aan mijn eigen projecten. Ik raak niet snel uitgekeken op het webdevelopment vak en ben altijd opzoek naar nieuwe dingen om te bouwen.
 
-Naast webdevelopment ben ik ook een groot fan van **pixelart** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset) na heel wat avonden hard werken. Ook heb ik meegedaan aan meerder hackathons en game jams. Mijn focus lag hier vooral op pixelart en tiling, maar ook op het programmeren van de game zelf of het bouwen van een leveleditor in javascipt. Tijdens deze events heb ik veel geleerd over het samenwerken met andere developers (vrienden) en het werken onder druk.`,
+Naast webdevelopment ben ik ook een groot fan van **pixelart** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset). Ook heb ik meegedaan aan meerdere **Hackathons** en **Game Jams**. Tijdens gamejams heb ik mijn skills kunnen uitbreiden met **Pixelart**, **3D Modeling** en **Game Developement**. Tijdens gamejams moet je werken met een strakke deadline en dat is een goede manier te leren werken onder druk, knopen door te hakken en snel te schakelen.`,
+    },
+    {
+      type: "content",
+      title: "Dit vind ik belangrijk",
+      content: `
+- Ik houd van **Leesbare code**. Zelfs zonder documentatie moet de code duidelijk zijn.
+- Ik houd van **modulaire en herbruikbare code**. Waar mogelijk maak ik gebruik van **componenten**.
+- Ik houd van **atomic functies** met 1 simpele functie.
+- Ik houd van **lightweight** oplossingen. Voor webdevelopment zoek ik eerst de oplossing in HTML dan CSS en dan JavaScript.
+- Ik houd van **early return** boven nested if statements. [Info](https://medium.com/swlh/return-early-pattern-3d18a41bba8)
+- Ik houd van veilige code. 
+- Ik houd van **semantisch kloppende HTML en CSS**.
+- Ik houd van duidelijke **coding standards**.
+- Ik houd van \`var()\`, \`flexbox\`, \`grid\`, \`gaps\`, \`:has()\`, \`:where()\`, \`<dialog>\`, \`async\`, \`await\`, \`import()\`, \`Promises\`, \`?.\`, \`...\` & \`const\`. 
+- Ik houd van een efficiente en consistente workflow.
+- Ik houd van consistente user interfaces.
+- Ik houd een **gebruiksvriendelijke** backend. 
+- Ik houd van andere **mensen helpen** en **kennis delen**.
+- Ik houd van duidelijke **effiëcient communicatie**.
+`,
     },
 
     {
