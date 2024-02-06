@@ -56,6 +56,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixelart** en **game develop
 - Ik houd een **gebruiksvriendelijke** backend. 
 - Ik houd van andere **mensen helpen** en **kennis delen**.
 - Ik houd van duidelijke **effiëcient communicatie**.
+
 `,
     },
 
