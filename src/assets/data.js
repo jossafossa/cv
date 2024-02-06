@@ -46,7 +46,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixelart** en **game develop
 - Ik houd van **modulaire en herbruikbare code**. Waar mogelijk maak ik gebruik van **componenten**.
 - Ik houd van **atomic functies** met 1 simpele functie.
 - Ik houd van **lightweight** oplossingen. Voor webdevelopment zoek ik eerst de oplossing in HTML dan CSS en dan JavaScript.
-- Ik houd van **early return** boven nested if statements. [Info](https://medium.com/swlh/return-early-pattern-3d18a41bba8)
+- Ik houd van **early return** boven nested if statements.
 - Ik houd van veilige code. 
 - Ik houd van **semantisch kloppende HTML en CSS**.
 - Ik houd van duidelijke **coding standards**.
