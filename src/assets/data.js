@@ -1,6 +1,6 @@
 export default {
   name: "Joost Hobma",
-  image: "https://www.jossafossa.nl/CV/img/1666973707109.jpg",
+  image: "./assets/img/jossafossa.jpg",
   linksLabel: "Portfolio:",
   links: [
     {
@@ -123,6 +123,20 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
         },
       ],
     },
+    // {
+    //   type: "projects",
+    //   title: "Projecten",
+    //   projects: [
+    //     {
+    //       title: 'GeA Fairplay',
+    //       url: 'https://www.gea-fairplay.nl',
+    //       tags: [
+    //         'Wordpress',
+    //       ],
+    //       image: 'gea-fairplay',
+    //     }
+    //   ]
+    // },
     {
       type: "attributes",
       qualities: {

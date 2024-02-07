@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Quicksand:wght@400;600&display=swap);
 
 :root {
-  --bg-light-fancy: linear-gradient(50deg, #41525d, #313750);
-  --bg-dark-fancy: linear-gradient(50deg, #1f282e, #101424);
+  --bg-light-fancy: linear-gradient(90deg, #41525d, #313750);
+  --bg-dark-fancy: linear-gradient(90deg, #1f282e, #101424);
   --bg-light-1: #41525d;
   --bg-light-2: #313750;
   --bg-dark: #1e2428;
@@ -106,7 +106,7 @@ h6 {
 .line-left,
 .line-right {
   margin-bottom: 1rem;
-  padding-bottom:1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .line-left:after,
@@ -144,7 +144,7 @@ h6 {
 }
 
 .marked {
-  padding: .5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   background: var(--primary-color-fancy);
   color: #fff;
   -webkit-box-shadow: 0 0 0 100px transparent inset;
@@ -166,7 +166,6 @@ h6 {
       font-weight: bold;
     }
   }
-  
 }
 
 a.marked {
@@ -224,25 +223,21 @@ a.marked {
   max-width: 1000px;
 }
 
-section {
+.section {
   padding: 3rem 0;
 }
 
 .key-value {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 1rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem 2rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  flex-direction: column;
 
   @media screen and (min-width: 720px) {
     gap: 1rem;
-    flex-direction: row;
   }
 }
 
@@ -359,13 +354,12 @@ table.fancy tr:last-child > td:first-child:after {
   height: 100%;
   width: calc(100% + var(--offset) * 2);
   top: 0;
-  left:0;
+  left: 0;
   margin-inline: calc(-1 * var(--offset));
   background: var(--bg-dark-fancy);
   position: absolute;
   z-index: -1;
 }
-
 
 .header__content > h1 {
   font-size: 3em;
@@ -629,15 +623,12 @@ table.fancy tr:last-child > td:first-child:after {
 
 .skill-table__row > :nth-child(2) {
   width: 8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background: var(--bg-light-fancy);
-  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+  // background: var(--bg-light-fancy);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -648,9 +639,8 @@ table.fancy tr:last-child > td:first-child:after {
 .skill-table__content .skill-table__row:first-child > :nth-child(2):before,
 .skill-table__content .skill-table__row:last-child > :nth-child(2):after {
   content: "";
-  background: var(--bg-light-fancy);
-  -webkit-box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+  background: var(--bg-light-2);
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 1rem;
   position: absolute;
@@ -669,7 +659,10 @@ table.fancy tr:last-child > td:first-child:after {
 
 .rating {
   color: #ebc200;
-  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 110%;
 }
 
 .rating__inner {
