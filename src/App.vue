@@ -9,29 +9,31 @@ import ResponsiveImage from "./components/ResponsiveImage.vue";
 <template>
   <div style="overflow-x: hidden">
     <header class="header">
-      <div class="container header__inner">
-        <div class="header__left">
-          <picture class="header__photo">
-            <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
-          </picture>
-          <div class="header__content hor-center">
-            <h1>{{ data.name }}</h1>
-            <div class="key-value">
-              <div>{{ data.linksLabel }}</div>
+      <div class="container">
+        <div class="row header__inner">
+          <div class="col col-12 col-lg-8 header__left">
+            <picture class="header__photo">
+              <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
+            </picture>
+            <div class="header__content hor-center">
+              <h1>{{ data.name }}</h1>
+              <div class="key-value">
+                <div>{{ data.linksLabel }}</div>
 
-              <a v-for="link in data.links" :href="link.url" class="marked">
-                {{ link.label }}
-              </a>
+                <a v-for="link in data.links" :href="link.url" class="marked">
+                  {{ link.label }}
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="header__information">
-          <table class="fancy condensed">
-            <tr v-for="contact in data.contactInfo">
-              <td>{{ contact.label }}</td>
-              <td>{{ contact.value }}</td>
-            </tr>
-          </table>
+          <div class="col col-12 col-lg-4 header__information">
+            <table class="fancy condensed">
+              <tr v-for="contact in data.contactInfo">
+                <td>{{ contact.label }}</td>
+                <td>{{ contact.value }}</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </header>
