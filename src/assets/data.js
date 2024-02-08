@@ -190,6 +190,12 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           image: "alessandro-pt.png",
           tags: ["Wordpress"],
         },
+        {
+          title: "Top 2000 viewer",
+          url: "https://top-2000.jossafossa.nl/",
+          image: "top-2000.png",
+          tags: ["Javascript", "WIP"],
+        },
       ],
     },
     {
