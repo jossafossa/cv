@@ -7,7 +7,7 @@
       class="lazyload"
     />
   </template>
-  <img :src="ogImage" :alt="src" />
+  <img :src="ogImage" :alt="src" data-sizes="auto" class="lazyload" />
 </template>
 
 <script setup>
