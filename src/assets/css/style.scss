@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Quicksand:wght@400;600&display=swap);
+@import "grid.scss";
+@import "reset.scss";
+@import "tags.scss";
+@import "base.scss";
 
 :root {
   --bg-light-fancy: linear-gradient(90deg, #41525d, #313750);
@@ -177,12 +181,6 @@ a.marked {
   box-shadow: inset 0 0 0 100px hsla(0, 0%, 100%, 0.1);
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .small {
   width: 25rem;
 }
@@ -224,7 +222,7 @@ a.marked {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 6rem 0;
 }
 
 .key-value {
@@ -749,13 +747,6 @@ footer p {
   .timeline__item__content:after,
   .timeline__item__content:before {
     display: none;
-  }
-
-  .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 
   #skills {

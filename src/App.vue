@@ -3,6 +3,7 @@ import data from "@/assets/data.js";
 import VueMarkdown from "vue-markdown-render";
 import optionalLink from "./components/optionalLink.vue";
 import cardProject from "./components/cardProject.vue";
+import ResponsiveImage from "./components/ResponsiveImage.vue";
 </script>
 
 <template>
@@ -10,9 +11,9 @@ import cardProject from "./components/cardProject.vue";
     <header class="header">
       <div class="container header__inner">
         <div class="header__left">
-          <div class="header__photo">
-            <img src="@/assets/img/jossafossa.jpg" alt="Joost Hobma" />
-          </div>
+          <picture class="header__photo">
+            <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
+          </picture>
           <div class="header__content hor-center">
             <h1>{{ data.name }}</h1>
             <div class="key-value">
@@ -35,8 +36,7 @@ import cardProject from "./components/cardProject.vue";
       </div>
     </header>
     <template v-for="section in data.sections">
-
-      <section v-if="section.type === 'content'" class="section " id="about">
+      <section v-if="section.type === 'content'" class="section" id="about">
         <div class="container small">
           <h1 class="line-left">{{ section.title }}</h1>
           <div class="text-container">
@@ -47,20 +47,15 @@ import cardProject from "./components/cardProject.vue";
 
       <section v-if="section.type === 'projects'" class="section bg-dark">
         <div class="container">
-
           <h1 class="line-left">{{ section.title }}</h1>
 
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          <div class="row row-1 row-md-2 row-lg-3">
             <template v-for="project in section.projects">
-
               <div class="col">
                 <card-project :project="project"></card-project>
-
               </div>
-
             </template>
           </div>
-
         </div>
       </section>
 
@@ -86,7 +81,7 @@ import cardProject from "./components/cardProject.vue";
         </div>
       </section>
 
-      <section v-if="section.type === 'attributes'" class="section ">
+      <section v-if="section.type === 'attributes'" class="section">
         <div class="container">
           <div class="row">
             <div id="skills" class="stretch">
@@ -110,7 +105,10 @@ import cardProject from "./components/cardProject.vue";
               <div id="qualities">
                 <h1 class="line-right">{{ section.qualities.title }}</h1>
                 <div class="qualities">
-                  <div class="qualities__row" v-for="item in section.qualities.items">
+                  <div
+                    class="qualities__row"
+                    v-for="item in section.qualities.items"
+                  >
                     <i :class="['fa', item.icon]"></i>
                     <div>{{ item.label }}</div>
                   </div>

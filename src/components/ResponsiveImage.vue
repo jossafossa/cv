@@ -1,66 +1,55 @@
 <template>
-    <picture>
-        <img :srcset="srcset" :alt="alt">
-    </picture>
+  <template v-for="source in sources">
+    <source :srcset="source.srcset" :type="source.format" data-sizes="auto" />
+  </template>
+  <img :src="ogImage" :alt="name" />
 </template>
 
-
 <script setup>
-import { onMounted, ref } from 'vue';
-
+import { onMounted, ref } from "vue";
 
 const props = defineProps({
-    src: String,
-    alt: String,
+  src: String,
+  alt: String,
 });
 
+const sizes = [
+  { width: 200, height: 200, suffix: "-200x200" },
+  { width: 400, height: 400, suffix: "-400x400" },
+  { width: 800, height: 800, suffix: "-800x800" },
+  { width: 1500, height: 1500, suffix: "-1500x1500" },
+  { width: 2000, height: 2000, suffix: "-2000x2000" },
+];
+let ogImage = `/img/${props.name}.jpg?url`;
 
-const getImages = async (name) => {
-    const images = import.meta.glob('../assets/img/*.jpg', {
-        query: {
-            width: '100,200,300',
-            height: '100,200,300'
-        },
-        eager: true,
+let formats = ["webp"];
+// let formats = [];
+
+const getSources = async (src) => {
+  let [name, ext] = src.split(".");
+  let sources = [];
+
+  for (let format of [...formats, ext]) {
+    let srcsets = [];
+    for (let size of sizes) {
+      let newFilename = `${name}${size.suffix}.${format}`;
+      let img = `/img/${name}${size.suffix}.${format}`;
+      console.log(img.default);
+      srcsets.push(/* @vite-ignore */ `${img} ${size.width}w`);
+    }
+    sources.push({
+      srcset: srcsets.join(", "),
+      format: `image/${format}`,
     });
+  }
 
-    return images[`../assets/img/${name}.jpg`]?.default;
-}
+  console.log(sources);
+  return sources;
+};
 
-// const getImagesold = async (src) => {
-//     const sizes = [
-//         [320, 240],
-//         [640, 480],
-//         [1024, 768],
-//         [1600, 1200],
-//         [2048, 1536],
-//     ];
+const sources = ref("");
 
-//     const images = sizes.map(([width, height]) => {
-//         return `${src}?w=${width}&h=${height}`;
-//     });
-
-//     console.log(images);
-
-//     // await all promises
-//     // dynamic_image = (await import(`./${name}.png?blur=1`)).default;
-
-//     let promises = images.map((src) => {
-//         return new Promise(async (resolve, reject) => {
-//             console.log(src);
-//             let image = await import(src);
-//             resolve(image.default);
-//         });
-//     });
-
-//     return Promise.all(promises);
-// };
-
-const srcset = ref("");
-
-onMounted(() => {
-    srcset.value = getImages(props.src);
+onMounted(async () => {
+  sources.value = await getSources(props.src);
 });
-
-
 </script>

@@ -123,20 +123,26 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
         },
       ],
     },
-    // {
-    //   type: "projects",
-    //   title: "Projecten",
-    //   projects: [
-    //     {
-    //       title: 'GeA Fairplay',
-    //       url: 'https://www.gea-fairplay.nl',
-    //       tags: [
-    //         'Wordpress',
-    //       ],
-    //       image: 'gea-fairplay',
-    //     }
-    //   ]
-    // },
+    {
+      type: "projects",
+      title: "Projecten",
+      projects: [
+        {
+          title: "GeA Fairplay",
+          url: "https://www.gea-fairplay.nl",
+          tags: ["Wordpress"],
+          image: "gea-fairplay.png",
+        },
+        {
+          title: "Compact CSS Grid",
+          url: "https://codepen.io/Jossafossa/pen/QWrdaaj",
+          image: "css-grid.png",
+          tags: ["CSS", "SCSS"],
+          description:
+            "Een compact / flexibel CSS grid systeem. Maak veel gebruik van `css var` en `calc`. Heeft zelfde functionaliteit als **Boostrap**",
+        },
+      ],
+    },
     {
       type: "attributes",
       qualities: {
