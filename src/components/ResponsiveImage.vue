@@ -1,8 +1,13 @@
 <template>
   <template v-for="source in sources">
-    <source :srcset="source.srcset" :type="source.format" data-sizes="auto" />
+    <source
+      :srcset="source.srcset"
+      :type="source.format"
+      data-sizes="auto"
+      class="lazyload"
+    />
   </template>
-  <img :src="ogImage" :alt="name" />
+  <img :src="ogImage" :alt="src" />
 </template>
 
 <script setup>
@@ -20,7 +25,7 @@ const sizes = [
   { width: 1500, height: 1500, suffix: "-1500x1500" },
   { width: 2000, height: 2000, suffix: "-2000x2000" },
 ];
-let ogImage = `/img/${props.name}.jpg?url`;
+let ogImage = ref("");
 
 let formats = ["webp"];
 // let formats = [];
@@ -32,10 +37,8 @@ const getSources = async (src) => {
   for (let format of [...formats, ext]) {
     let srcsets = [];
     for (let size of sizes) {
-      let newFilename = `${name}${size.suffix}.${format}`;
       let img = `/img/${name}${size.suffix}.${format}`;
-      console.log(img.default);
-      srcsets.push(/* @vite-ignore */ `${img} ${size.width}w`);
+      srcsets.push(`${img} ${size.width}w`);
     }
     sources.push({
       srcset: srcsets.join(", "),
@@ -50,6 +53,7 @@ const getSources = async (src) => {
 const sources = ref("");
 
 onMounted(async () => {
+  ogImage.value = `/img/${props.src}`;
   sources.value = await getSources(props.src);
 });
 </script>

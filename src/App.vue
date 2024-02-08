@@ -84,42 +84,53 @@ import ResponsiveImage from "./components/ResponsiveImage.vue";
       <section v-if="section.type === 'attributes'" class="section">
         <div class="container">
           <div class="row">
-            <div id="skills" class="stretch">
-              <h1 class="line-left">{{ section.skills.title }}</h1>
-              <div class="skills-container">
-                <div class="skill-table" v-for="skill in section.skills.skills">
-                  <div class="skill-table__title">{{ skill.title }}</div>
-                  <div class="skill-table__content">
-                    <div class="skill-table__row" v-for="item in skill.items">
-                      <div>{{ item.label }}</div>
-                      <div :value="item.rating" class="rating">
-                        <i v-for="index in item.rating" class="fa fa-star"></i>
+            <div class="col col-12 col-lg-8">
+              <div id="skills" class="stretch">
+                <h1 class="line-left">{{ section.skills.title }}</h1>
+                <div class="skills-container">
+                  <div
+                    class="skill-table"
+                    v-for="skill in section.skills.skills"
+                  >
+                    <div class="skill-table__title">{{ skill.title }}</div>
+                    <div class="skill-table__content">
+                      <div class="skill-table__row" v-for="item in skill.items">
+                        <div>{{ item.label }}</div>
+                        <div :value="item.rating" class="rating">
+                          <i
+                            v-for="index in item.rating"
+                            class="fa fa-star"
+                          ></i>
+                        </div>
+                        <div class="suffix">{{ item.suffix }}</div>
                       </div>
-                      <div class="suffix">{{ item.suffix }}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="small">
-              <div id="qualities">
-                <h1 class="line-right">{{ section.qualities.title }}</h1>
-                <div class="qualities">
-                  <div
-                    class="qualities__row"
-                    v-for="item in section.qualities.items"
-                  >
-                    <i :class="['fa', item.icon]"></i>
-                    <div>{{ item.label }}</div>
+
+            <div class="col col-12 col-lg-4">
+              <div class="small">
+                <div id="qualities">
+                  <h1 class="line-right">{{ section.qualities.title }}</h1>
+                  <div class="qualities">
+                    <div
+                      class="qualities__row"
+                      v-for="item in section.qualities.items"
+                    >
+                      <i :class="['fa', item.icon]"></i>
+                      <div>{{ item.label }}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div id="interests">
-                <h1 class="line-right">{{ section.interests.title }}</h1>
-                <div class="interests-container">
-                  <div class="marked" v-for="item in section.interests.items">
-                    <i v-if="item.icon" :class="['fa', item.icon]"></i>
-                    {{ item.label }}
+                <div id="interests">
+                  <h1 class="line-right">{{ section.interests.title }}</h1>
+                  <div class="interests-container">
+                    <div class="marked" v-for="item in section.interests.items">
+                      <i v-if="item.icon" :class="['fa', item.icon]"></i>
+                      {{ item.label }}
+                    </div>
                   </div>
                 </div>
               </div>

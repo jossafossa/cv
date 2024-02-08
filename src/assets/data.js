@@ -141,6 +141,55 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           description:
             "Een compact / flexibel CSS grid systeem. Maak veel gebruik van `css var` en `calc`. Heeft zelfde functionaliteit als **Boostrap**",
         },
+        {
+          title: "Drawing app",
+          image: "drawing.png",
+          url: "https://www.jossafossa.nl/projects/draw/",
+          tags: ["JavaScript", "Custom"],
+          description:
+            "Een custom drawing app gemaakt vanilla Javascript op een `canvas` element.",
+        },
+        {
+          title: "Spotidash",
+          url: "https://spotidash.jossafossa.nl/",
+          image: "spotidash.png",
+          tags: ["React", "Spotify Rest API"],
+          description:
+            "Een fullscreen spotify player gemaakt in React. De achtergrond laat de huidige playlist zien. ",
+        },
+        {
+          title: "Mansion Indoor Tileset",
+          url: "https://jossafossa.itch.io/mansion-indoor-tileset",
+          image: "mansion.png",
+          tags: ["Pixel Art", "Game Assets"],
+        },
+        {
+          title: "Pure CSS Filters",
+          url: "https://codepen.io/Jossafossa/pen/abXrzxz",
+          image: "css-filter.png",
+          tags: ["CSS", "Experimental"],
+        },
+        {
+          title: "Cat reveal",
+          url: "https://codepen.io/Jossafossa/pen/eYryzmp",
+          image: "cat-reveal.png",
+          description:
+            "Chrome only. beweeg je muis over de kat om hem te onthullen",
+          tags: ["Custom Javascript", "Experimental"],
+        },
+        {
+          title: "Cat sliding puzzle",
+          url: "https://codepen.io/Jossafossa/pen/zYjZQZR",
+          description: "Een schuifpuzzle met een kat.",
+          image: "cat-puzzle.png",
+          tags: ["Custom Javascript", "Experimental"],
+        },
+        {
+          title: "Personal training website",
+          url: "https://www.alessandro-pt.com",
+          image: "alessandro-pt.png",
+          tags: ["Wordpress"],
+        },
       ],
     },
     {
