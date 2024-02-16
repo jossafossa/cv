@@ -37,6 +37,11 @@
   padding: 0;
 }
 
+:where(button) {
+  background-color: transparent;
+  border: none;
+}
+
 // reset colors of link
 :where(a, a:hover) {
   color: inherit;

@@ -4,6 +4,18 @@ import VueMarkdown from "vue-markdown-render";
 import optionalLink from "./components/optionalLink.vue";
 import cardProject from "./components/cardProject.vue";
 import ResponsiveImage from "./components/ResponsiveImage.vue";
+
+const random = (arr) =>
+  arr
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+// show hidden if url has ?hidden
+const showHidden = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.has("hidden");
+};
 </script>
 
 <template>
@@ -52,8 +64,8 @@ import ResponsiveImage from "./components/ResponsiveImage.vue";
           <h1 class="line-left">{{ section.title }}</h1>
 
           <div class="row row-1 row-md-2 row-lg-3">
-            <template v-for="project in section.projects">
-              <div class="col">
+            <template v-for="project in random(section.projects)">
+              <div class="col" v-if="!project?.hidden || showHidden()">
                 <card-project :project="project"></card-project>
               </div>
             </template>

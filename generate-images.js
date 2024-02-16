@@ -14,6 +14,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 let sizes = [
+  {},
   { width: 200, height: 200, suffix: "-200x200" },
   { width: 400, height: 400, suffix: "-400x400" },
   { width: 800, height: 800, suffix: "-800x800" },
@@ -31,14 +32,17 @@ function resizeImages() {
       let ext = file.split(".").pop();
       for (let size of sizes) {
         let resized = sharp(`${inputDir}/${file}`).resize(
-          size.width,
-          size.height,
+          size?.width,
+          size?.height,
           {
             fit: "outside",
           }
         );
         [...formats, ext].forEach((format) => {
-          let newFilename = file.replace(`.${ext}`, `${size.suffix}.${format}`);
+          let newFilename = file.replace(
+            `.${ext}`,
+            `${size?.suffix || ""}.${format}`
+          );
           resized.toFile(`${outputDir}/${newFilename}`);
         });
       }

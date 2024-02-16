@@ -146,7 +146,7 @@ $section-spacing: (
 }
 .hstack {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
   gap: var(--gap-x);
 }
 

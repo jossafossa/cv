@@ -161,7 +161,9 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           title: "Mansion Indoor Tileset",
           url: "https://jossafossa.itch.io/mansion-indoor-tileset",
           image: "mansion.png",
-          tags: ["Pixel Art", "Game Assets"],
+          description:
+            "Een pixel art tileset die gebruikt kan worden in games.",
+          tags: ["Pixel Art", "Game Assets", "Tiled", "Aseprite"],
         },
         {
           title: "Pure CSS Filters",
@@ -194,8 +196,96 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           title: "Top 2000 viewer",
           url: "https://top-2000.jossafossa.nl/",
           image: "top-2000.png",
+          description:
+            "Het idee is om een betere viewer te hebben voor de top 2000.",
           tags: ["Javascript", "WIP"],
         },
+        {
+          title: "Morgue Mayham",
+          url: "https://ldjam.com/events/ludum-dare/54/morgue-mayhem",
+          description:
+            "Onze submission voor de ludum dare 54. Zorg ervoor dat de bezoekers van het mortuarium de 'juiste' dierbare te zien krijgen?",
+          images: [
+            "morgue-mayham-2.png",
+            "morgue-mayham-1.png",
+            "morgue-mayham-3.png",
+            "morgue-mayham-4.png",
+            "morgue-mayham-5.png",
+          ],
+          image: "morgue-mayham-2.png",
+          tags: ["Pixelart", "Gamejam", "Godot", "Tiled", "Aseprite"],
+        },
+        {
+          title: "Shadow Rush",
+          url: "https://ldjam.com/events/ludum-dare/50/shadow-rush",
+          image: "shadow-rush.png",
+          tags: ["Pixelart", "Gamejam", "Unity", "Javascript"],
+          description:
+            'Onze submission voor de ludum dare 50. "Shadow Rush" is een endless racing game waarbij je zo lang mogelijk je schaduw moet zien te ontwijken.',
+        },
+        {
+          title: "Peter OS",
+          url: "https://ldjam.com/events/ludum-dare/51/peter-os",
+          description:
+            "Onze submission voor de ludum dare 51. Peter heeft een nieuwe telefoon nodig. Kun jij voorkomen dat zijn oude telefoon crasht? Ondertussen leer je Peter kennen.",
+          image: "peter-os.png",
+          tags: ["Pixelart", "Gamejam", "Unity", "Aseprite"],
+        },
+        {
+          title: "P2P Chat",
+          url: "https://files.jossafossa.nl/",
+          image: "files.png",
+          tags: ["Javascript", "P2P"],
+        },
+        {
+          title: "Hypotheek berekenen",
+          url: "https://berekenen.financieelfit.nl/",
+          image: "financieelfit.png",
+          tags: ["Wordpress", "Custom", "PHP", "Gotenberg", "JS", "API"],
+          hidden: true,
+        },
+        {
+          title: "Zonwering configurator",
+          url: "https://www.zonwering-online.com/",
+          image: "zonwering-online.png",
+          tags: ["Wordpress", "Custom", "PHP", "VueJS", "Woocommerce"],
+          hidden: true,
+        },
+        {
+          title: "Dakcheck",
+          url: "https://www.sbsolar.nl/gratis-dakcheck/",
+          image: "sbsolar.png",
+          tags: ["Wordpress", "Custom", "PHP", "JS", "API"],
+          hidden: true,
+        },
+        {
+          title: "Winel configurator",
+          url: "https://www.winel.nl/",
+          image: "winel.png",
+          tags: ["Wordpress", "Custom", "PHP", "JS", "Woocommerce"],
+          hidden: true,
+        },
+        {
+          title: "NOM",
+          url: "https://www.nom.nl/nom-in-cijfers/portfolio/kaart/",
+          image: "nom.png",
+          description:
+            'Voor NOM.nl heb ik een custom "Google Maps" module gemaakt. Deze module is makkelijk her te gebruiken en in te stellen met plugins en events. Ook heb ik een Filter module gemaakt die veilig en snel posttypes kan filteren',
+          tags: ["Wordpress", "PHP Module", "PHP", "JS"],
+          hidden: true,
+        },
+        // TODO: wordpress plugin
+        // Work projects
+        // berekenen.financieelfit.nl
+        // zonwering-online.com configurator
+        // sbsolar.nl dakcheck
+        // winel configurator
+        // https://www.nom.nl/nom-in-cijfers/portfolio/kaart/, https://www.nom.nl/media
+        // Youtube zoom
+        // Catifier
+        // Favicon games
+        // overviewer to osd
+        // custom select
       ],
     },
     {

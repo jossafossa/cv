@@ -5,6 +5,12 @@
         <picture class="ratio-wide">
           <responsive-image :src="project.image"></responsive-image>
         </picture>
+
+        <div class="card-links hstack gap-1" v-if="project.images">
+          <image-lightbox :images="project?.images">
+            <button class="button">View images</button>
+          </image-lightbox>
+        </div>
       </header>
 
       <section class="vstack g-half">
@@ -28,10 +34,22 @@
 <script setup>
 import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import OptionalLink from "@/components/optionalLink.vue";
+import ImageLightbox from "@/components/ImageLightbox.vue";
 import VueMarkdown from "vue-markdown-render";
 defineProps({
   project: Object,
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+  position: relative;
+
+  > .card-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+  }
+}
+</style>
