@@ -31,6 +31,23 @@ function resizeImages() {
     files.forEach((file) => {
       let ext = file.split(".").pop();
       for (let size of sizes) {
+        const outputFiles = [...formats].map((format) => {
+          let newFilename = file.replace(
+            `.${ext}`,
+            `${size?.suffix || ""}.${format}`
+          );
+
+          return `${outputDir}/${newFilename}`;
+          // resized.toFile(`${outputDir}/${newFilename}`);
+        });
+
+        // bail if file exists
+        if (outputFiles.every((file) => fs.existsSync(file))) {
+          return;
+        }
+
+        console.log({ newFiles: outputFiles, formats });
+
         let resized = sharp(`${inputDir}/${file}`).resize(
           size?.width,
           size?.height,
@@ -38,13 +55,10 @@ function resizeImages() {
             fit: "outside",
           }
         );
-        [...formats, ext].forEach((format) => {
-          let newFilename = file.replace(
-            `.${ext}`,
-            `${size?.suffix || ""}.${format}`
-          );
-          resized.toFile(`${outputDir}/${newFilename}`);
-        });
+
+        for (let file of outputFiles) {
+          resized.toFile(file);
+        }
       }
     });
   });

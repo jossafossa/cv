@@ -13,7 +13,7 @@ export function getSources(src) {
   let [name, ext] = src.split(".");
   let sources = [];
 
-  for (let format of [...formats, ext]) {
+  for (let format of [...formats]) {
     let srcsets = [];
     for (let size of sizes) {
       let img = `/img/${name}${size.suffix}.${format}`;
