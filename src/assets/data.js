@@ -36,7 +36,7 @@ export default {
       content: `
 Hoi, ik ben Joost, een **full stack** developer uit Friesland, maar gehuisvest in Groningen. Ik ben al sinds 2016 werkzaam bij verschillende bedrijven in webdevelopment land. Ik heb veel ervaring met het bouwen van custom **WordPress** Thema's van frontend tot backend, van statische content tot **Webshops**, **Configurators**, **API-koppelingen** en **Plug-ins** bouwen. Dit is niet alleen WordPress specifieke kennis, maar ook veel **JavaScript** (custom, **VueJS**, **React**), **SCSS**, **PHP** en **HTML**. Als ik thuis ben, slinger ik meestal meteen de computer aan om thuis verder te werken aan mijn eigen projecten. Ik raak niet snel uitgekeken op het webdevelopment vak en ben altijd op zoek naar nieuwe dingen om te bouwen.
 
-Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset). Ook heb ik meegedaan aan meerdere **Hackathons** en **Game Jams**. Tijdens gamejams heb ik mijn skills kunnen uitbreiden met **pixel art**, **3D Modeling** en **Game Development**. Tijdens gamejams moet je werken met een strakke deadline en dat is een goede manier te leren werken onder druk, knopen door te hakken en snel te schakelen.`,
+Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset). Ook heb ik meegedaan aan meerdere **Hackathons** en **Game Jams**. Tijdens Game Jams heb ik mijn skills kunnen uitbreiden met **pixel art**, **3D Modeling** en **Game Development**. Tijdens Game Jams moet je werken met een strakke deadline en dat is een goede manier te leren werken onder druk, knopen door te hakken en snel te schakelen.`,
     },
     {
       type: "content",
@@ -130,14 +130,16 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
         {
           title: "GeA Fairplay",
           url: "https://www.gea-fairplay.nl",
-          tags: ["Wordpress"],
+          tags: ["WordPress", "CSS", "JavaScript", "PHP"],
+          description:
+            "Een custom WordPress thema gemaakt een E-sportsvereniging. ",
           image: "gea-fairplay.webp",
         },
         {
           title: "Compact CSS Grid",
           url: "https://codepen.io/Jossafossa/pen/QWrdaaj",
           image: "css-grid.webp",
-          tags: ["CSS", "SCSS"],
+          tags: ["CSS"],
           description:
             "Een compact / flexibel CSS grid systeem. Maak veel gebruik van `css var` en `calc`. Heeft zelfde functionaliteit als **Boostrap**",
         },
@@ -145,15 +147,15 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           title: "Drawing app",
           image: "drawing.webp",
           url: "https://www.jossafossa.nl/projects/draw/",
-          tags: ["JavaScript", "Custom"],
+          tags: ["JavaScript"],
           description:
-            "Een custom drawing app gemaakt vanilla Javascript op een `canvas` element.",
+            "Een custom drawing app gemaakt vanilla JavaScript op een `canvas` element.",
         },
         {
           title: "Spotidash",
           url: "https://spotidash.jossafossa.nl/",
           image: "spotidash.webp",
-          tags: ["React", "Spotify Rest API"],
+          tags: ["React", "API", "CSS"],
           description:
             "Een fullscreen spotify player gemaakt in React. De achtergrond laat de huidige playlist zien. ",
         },
@@ -171,12 +173,14 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           ],
           description:
             "Een pixel art tileset die gebruikt kan worden in games.",
-          tags: ["Pixel Art", "Game Assets", "Tiled", "Aseprite"],
+          tags: ["Pixel Art"],
         },
         {
           title: "Pure CSS Filters",
           url: "https://codepen.io/Jossafossa/pen/abXrzxz",
           image: "css-filter.webp",
+          description:
+            "Een expirimentele manier om met puur CSS filters te laten werken. De filters hierboven werken op dezelfde manier",
           tags: ["CSS", "Experimental"],
         },
         {
@@ -185,20 +189,21 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           image: "cat-reveal.webp",
           description:
             "Chrome only. beweeg je muis over de kat om hem te onthullen",
-          tags: ["Custom Javascript", "Experimental"],
+          tags: ["Experimental", "JavaScript"],
         },
         {
           title: "Cat sliding puzzle",
           url: "https://codepen.io/Jossafossa/pen/zYjZQZR",
           description: "Een schuifpuzzle met een kat.",
           image: "cat-puzzle.webp",
-          tags: ["Custom Javascript", "Experimental"],
+          tags: ["Experimental", "JavaScript", "CSS"],
         },
         {
-          title: "Personal training website",
+          title: "Alessandro Personal Training",
+          description: "Een custom WordPress thema gemaakt voor Gutenberg.",
           url: "https://www.alessandro-pt.com",
           image: "alessandro-pt.webp",
-          tags: ["Wordpress"],
+          tags: ["WordPress", "CSS", "JavaScript", "PHP"],
         },
         {
           title: "Top 2000 viewer",
@@ -206,7 +211,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           image: "top-2000.webp",
           description:
             "Het idee is om een betere viewer te hebben voor de top 2000.",
-          tags: ["Javascript", "WIP"],
+          tags: ["JavaScript", "CSS", "API"],
         },
         {
           title: "Morgue Mayham",
@@ -221,15 +226,15 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "morgue-mayham-5.webp",
           ],
           image: "morgue-mayham-2.webp",
-          tags: ["Pixelart", "Gamejam", "Godot", "Tiled", "Aseprite"],
+          tags: ["Pixel Art", "Game Jam", "Godot"],
         },
         {
           title: "Shadow Rush",
           url: "https://ldjam.com/events/ludum-dare/50/shadow-rush",
           image: "shadow-rush.webp",
-          tags: ["Pixelart", "Gamejam", "Unity", "Javascript"],
+          tags: ["Pixel Art", "Game Jam", "Unity", "JavaScript"],
           description:
-            'Onze submission voor de ludum dare 50. "Shadow Rush" is een endless racing game waarbij je zo lang mogelijk je schaduw moet zien te ontwijken.',
+            'Onze submission voor de ludum dare 50. "Shadow Rush" is een endless racing game waarbij je zo lang mogelijk je schaduw moet zien te ontwijken. Met Level editor',
         },
         {
           title: "Peter OS",
@@ -237,13 +242,24 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           description:
             "Onze submission voor de ludum dare 51. Peter heeft een nieuwe telefoon nodig. Kun jij voorkomen dat zijn oude telefoon crasht? Ondertussen leer je Peter kennen.",
           image: "peter-os.webp",
-          tags: ["Pixelart", "Gamejam", "Unity", "Aseprite"],
+          tags: ["Pixel Art", "Game Jam", "Unity"],
+        },
+        {
+          title: "Don't let them bug you",
+          url: "https://ldjam.com/events/ludum-dare/52/harvest-td",
+          image: "ld52-1.webp",
+          description:
+            "Onze submission voor de ludum dare 52. Een tower defense game waarbij je je planten moet beschermen tegen insecten.",
+          images: ["ld52-1.webp", "ld52-2.webp"],
+          tags: ["Game Jam", "Unity", "3D Modeling"],
         },
         {
           title: "P2P Chat",
           url: "https://files.jossafossa.nl/",
           image: "files.webp",
-          tags: ["Javascript", "P2P"],
+          description:
+            "Een simpel P2P chat systeem met met peerjs. Staat berichten en files toe.",
+          tags: ["JavaScript", "P2P", "VueJS"],
         },
         {
           title: "Hypotheek berekenen",
@@ -256,7 +272,9 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "financieelfit-4.webp",
             "financieelfit-5.webp",
           ],
-          tags: ["Wordpress", "Custom", "PHP", "Gotenberg", "JS", "API"],
+          description:
+            "Een custom multistep formulier, volledig te beheren in WordPress, koppeling met een API en PDF generatie",
+          tags: ["WordPress", "PHP", "Gotenberg", "JavaScript", "API"],
           hidden: true,
         },
         {
@@ -264,7 +282,9 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           url: "https://www.zonwering-online.com/",
           image: "zonwering-1.webp",
           images: ["zonwering-1.webp", "zonwering-2.webp"],
-          tags: ["Wordpress", "Custom", "PHP", "VueJS", "Woocommerce"],
+          description:
+            "Een custom WooCommerce webshop met een uitgebreide product configurator gemaakt in VueJS",
+          tags: ["WordPress", "CSS", "PHP", "VueJS", "WooCommerce"],
           hidden: true,
         },
         {
@@ -278,7 +298,9 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "sbsolar-4.webp",
             "sbsolar-5.webp",
           ],
-          tags: ["Wordpress", "Custom", "PHP", "JS", "API"],
+          description:
+            "Een custom WordPress website met een dakcheck module met koppeling met een CRM systeem",
+          tags: ["WordPress", "PHP", "JavaScript", "API"],
           hidden: true,
         },
         {
@@ -292,7 +314,9 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "winel-4.webp",
             "winel-5.webp",
           ],
-          tags: ["Wordpress", "Custom", "PHP", "JS", "Woocommerce"],
+          description:
+            "Een Custom Woocommerce webshop met uitgebreide product configurator",
+          tags: ["WordPress", "PHP", "CSS", "JavaScript", "WooCommerce"],
           hidden: true,
         },
         {
@@ -302,16 +326,11 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           images: ["nom-1.webp", "nom-2.webp"],
           description:
             'Voor NOM.nl heb ik een custom "Google Maps" module gemaakt. Deze module is makkelijk her te gebruiken en in te stellen met plugins en events. Ook heb ik een Filter module gemaakt die veilig en snel posttypes kan filteren',
-          tags: ["Wordpress", "PHP Module", "PHP", "JS"],
+          tags: ["WordPress", "PHP", "JavaScript"],
           hidden: true,
         },
-        // TODO: wordpress plugin
+        // TODO: WordPress plugin
         // Work projects
-        // berekenen.financieelfit.nl
-        // zonwering-online.com configurator
-        // sbsolar.nl dakcheck
-        // winel configurator
-        // https://www.nom.nl/nom-in-cijfers/portfolio/kaart/, https://www.nom.nl/media
         // Youtube zoom
         // Catifier
         // Favicon games
@@ -367,7 +386,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             icon: "fa fa-gamepad",
           },
           {
-            label: "Pixelart",
+            label: "Pixel Art",
             icon: "fa fa-paint-brush",
           },
           {
@@ -427,7 +446,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
                 suffix: "Geavanceerd",
               },
               {
-                label: "Wordpress",
+                label: "WordPress",
                 rating: 5,
                 suffix: "Geavanceerd",
               },

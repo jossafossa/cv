@@ -3,4 +3,52 @@
   background-color: var(--primary-color);
   font-weight: bold;
   font-size: 80%;
+
+  input + & {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 100px;
+    --size: 1rem;
+    --ball-size: 0.5rem;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: "";
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+    }
+
+    &:before {
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &:after {
+      width: var(--ball-size);
+      height: var(--ball-size);
+      margin-left: calc((var(--size) - var(--ball-size)) / 2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: -1;
+      position: absolute;
+      opacity: 0;
+      background-color: var(--bg-dark);
+    }
+  }
+
+  input:checked + & {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.2;
+    }
+  }
 }

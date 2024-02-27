@@ -16,6 +16,43 @@ const showHidden = () => {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.has("hidden");
 };
+
+/**
+ * Gets all the tags from the projects. Sort on the frequency of the tags. Return an array of {tag: string, count: number}
+ * @param {Array<{}>} projects
+ */
+const getFilters = (projects) => {
+  projects = projects.filter((project) => !project.hidden || showHidden());
+
+  const tags = projects.flatMap((project) => project.tags);
+
+  let map = new Map();
+  tags.forEach((tag) => {
+    if (!map.has(tag)) map.set(tag, 0);
+    map.set(tag, map.get(tag) + 1);
+  });
+
+  let sorted = [...map.entries()].sort((a, b) => b[1] - a[1]);
+
+  return sorted.map(([tag, count]) => ({ tag, count }));
+};
+
+const getFilterStyle = (projects) => {
+  const tags = getFilters(projects);
+  console.log({ tags });
+  tags.unshift({ tag: "all" });
+  const styles = tags.map((filter) => {
+    return `
+      .filters:has([data-type*="${filter.tag}"]:checked) [data-type-target*="${filter.tag}"]
+    `;
+  });
+  let selector = styles.join(", ");
+  return `
+    ${selector} {
+      display: block;
+    }
+  `;
+};
 </script>
 
 <template>
@@ -59,16 +96,53 @@ const showHidden = () => {
         </div>
       </section>
 
-      <section v-if="section.type === 'projects'" class="section bg-dark">
+      <section
+        v-if="section.type === 'projects'"
+        class="section bg-dark filters"
+      >
         <div class="container">
-          <h1 class="line-left">{{ section.title }}</h1>
+          <div class="vstack g-1">
+            <h1 class="line-left">{{ section.title }}</h1>
 
-          <div class="row row-1 row-md-2 row-lg-3">
-            <template v-for="project in random(section.projects)">
-              <div class="col" v-if="!project?.hidden || showHidden()">
-                <card-project :project="project"></card-project>
-              </div>
-            </template>
+            <component :is="'style'">
+              {{ getFilterStyle(section.projects) }}
+            </component>
+
+            <div class="hstack f-1">
+              <input
+                type="radio"
+                name="type"
+                id="all"
+                data-type="all"
+                checked
+                class="hidden"
+              />
+              <label for="all" class="tag">All</label>
+              <template v-for="filter in getFilters(section.projects)">
+                <input
+                  type="radio"
+                  name="type"
+                  :id="filter.tag"
+                  :data-type="filter.tag"
+                  class="hidden"
+                />
+                <label :for="filter.tag" class="tag"
+                  >{{ filter.tag }} ({{ filter.count }})</label
+                >
+              </template>
+            </div>
+
+            <div class="row row-1 row-md-2 row-lg-3">
+              <template v-for="project in random(section.projects)">
+                <div
+                  class="col"
+                  v-if="!project?.hidden || showHidden()"
+                  :data-type-target="[...project.tags, 'all'].join(' ')"
+                >
+                  <card-project :project="project"></card-project>
+                </div>
+              </template>
+            </div>
           </div>
         </div>
       </section>
@@ -163,4 +237,14 @@ const showHidden = () => {
 
 <style lang="scss">
 @import "@/assets/css/style.scss";
+
+[data-type-target] {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
 </style>
