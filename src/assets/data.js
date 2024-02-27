@@ -329,7 +329,17 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           tags: ["WordPress", "PHP", "JavaScript"],
           hidden: true,
         },
-        // TODO: WordPress plugin
+        {
+          title: "WP-Quick-Seach",
+          url: "https://github.com/jossafossa/quick-search",
+          image: "quick-search-1.webp",
+          images: ["quick-search-1.webp", "quick-search-2.webp"],
+          description:
+            "Een custom WordPress plugin waarmee je snel door wordpress kan navigeren of acties kan uitvoeren. Er zit een update server en een License server aan gekoppeld.",
+          tags: ["WordPress", "PHP", "CSS", "JavaScript", "Plugin", "VueJS"],
+        },
+        // track
+        // gaarkeuken
         // Work projects
         // Youtube zoom
         // Catifier
