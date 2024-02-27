@@ -136,12 +136,12 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           image: "gea-fairplay.webp",
         },
         {
-          title: "Compact CSS Grid",
+          title: "Compact CSS-Grid",
           url: "https://codepen.io/Jossafossa/pen/QWrdaaj",
           image: "css-grid.webp",
           tags: ["CSS"],
           description:
-            "Een compact / flexibel CSS grid systeem. Maak veel gebruik van `css var` en `calc`. Heeft zelfde functionaliteit als **Boostrap**",
+            "Een compact / flexibel CSS-grid systeem. Maak veel gebruik van `css var` en `calc`. Heeft zelfde functionaliteit als **Bootstrap**",
         },
         {
           title: "Drawing app",
@@ -180,7 +180,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           url: "https://codepen.io/Jossafossa/pen/abXrzxz",
           image: "css-filter.webp",
           description:
-            "Een expirimentele manier om met puur CSS filters te laten werken. De filters hierboven werken op dezelfde manier",
+            "Een experimentele manier om met puur CSS filters te laten werken. De filters hierboven werken op dezelfde manier",
           tags: ["CSS", "Experimental"],
         },
         {
@@ -188,13 +188,13 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           url: "https://codepen.io/Jossafossa/pen/eYryzmp",
           image: "cat-reveal.webp",
           description:
-            "Chrome only. beweeg je muis over de kat om hem te onthullen",
+            "Chrome only. Beweeg je muis over de kat om hem te onthullen",
           tags: ["Experimental", "JavaScript"],
         },
         {
           title: "Cat sliding puzzle",
           url: "https://codepen.io/Jossafossa/pen/zYjZQZR",
-          description: "Een schuifpuzzle met een kat.",
+          description: "Een schuifpuzzel met een kat.",
           image: "cat-puzzle.webp",
           tags: ["Experimental", "JavaScript", "CSS"],
         },
@@ -217,7 +217,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           title: "Morgue Mayham",
           url: "https://ldjam.com/events/ludum-dare/54/morgue-mayhem",
           description:
-            "Onze submission voor de ludum dare 54. Zorg ervoor dat de bezoekers van het mortuarium de 'juiste' dierbare te zien krijgen?",
+            "Onze submission voor de Ludum Dare 54. Zorg ervoor dat de bezoekers van het mortuarium de 'juiste' dierbare te zien krijgen?",
           images: [
             "morgue-mayham-2.webp",
             "morgue-mayham-1.webp",
@@ -234,13 +234,13 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           image: "shadow-rush.webp",
           tags: ["Pixel Art", "Game Jam", "Unity", "JavaScript"],
           description:
-            'Onze submission voor de ludum dare 50. "Shadow Rush" is een endless racing game waarbij je zo lang mogelijk je schaduw moet zien te ontwijken. Met Level editor',
+            'Onze submission voor de Ludum Dare 50. "Shadow Rush" is een endless racing game waarbij je zo lang mogelijk je schaduw moet zien te ontwijken. Met Level editor',
         },
         {
           title: "Peter OS",
           url: "https://ldjam.com/events/ludum-dare/51/peter-os",
           description:
-            "Onze submission voor de ludum dare 51. Peter heeft een nieuwe telefoon nodig. Kun jij voorkomen dat zijn oude telefoon crasht? Ondertussen leer je Peter kennen.",
+            "Onze submission voor de Ludum Dare 51. Peter heeft een nieuwe telefoon nodig. Kun jij voorkomen dat zijn oude telefoon crasht? Ondertussen leer je Peter kennen.",
           image: "peter-os.webp",
           tags: ["Pixel Art", "Game Jam", "Unity"],
         },
@@ -249,7 +249,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           url: "https://ldjam.com/events/ludum-dare/52/harvest-td",
           image: "ld52-1.webp",
           description:
-            "Onze submission voor de ludum dare 52. Een tower defense game waarbij je je planten moet beschermen tegen insecten.",
+            "Onze submission voor de Ludum Dare 52. Een tower defense game waarbij je je planten moet beschermen tegen insecten.",
           images: ["ld52-1.webp", "ld52-2.webp"],
           tags: ["Game Jam", "Unity", "3D Modeling"],
         },
@@ -258,7 +258,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           url: "https://files.jossafossa.nl/",
           image: "files.webp",
           description:
-            "Een simpel P2P chat systeem met met peerjs. Staat berichten en files toe.",
+            "Een simpel P2P chat systeem met met peerJS. Staat berichten en files toe.",
           tags: ["JavaScript", "P2P", "VueJS"],
         },
         {
@@ -273,7 +273,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "financieelfit-5.webp",
           ],
           description:
-            "Een custom multistep formulier, volledig te beheren in WordPress, koppeling met een API en PDF generatie",
+            "Een custom multistep formulier, volledig te beheren in WordPress, koppeling met een API en PDF-generatie",
           tags: ["WordPress", "PHP", "Gotenberg", "JavaScript", "API"],
           hidden: true,
         },
@@ -299,7 +299,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             "sbsolar-5.webp",
           ],
           description:
-            "Een custom WordPress website met een dakcheck module met koppeling met een CRM systeem",
+            "Een custom WordPress website met een dakcheck module met koppeling met een CRM-systeem",
           tags: ["WordPress", "PHP", "JavaScript", "API"],
           hidden: true,
         },
@@ -496,7 +496,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
             title: "Tools",
             items: [
               {
-                label: "VSCode",
+                label: "VS Code",
                 rating: 5,
                 suffix: "Geavanceerd",
               },
