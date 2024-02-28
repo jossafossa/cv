@@ -387,6 +387,7 @@ table.fancy tr:last-child > td:first-child:after {
   position: relative;
   z-index: 2;
   border-radius: 1rem;
+  display: flex;
 }
 
 .header__information > table {
