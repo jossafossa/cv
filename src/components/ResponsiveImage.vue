@@ -1,13 +1,12 @@
 <template>
   <template v-for="source in sources">
-    <source
+    <img
       :data-srcset="source.srcset"
       :type="source.format"
       data-sizes="auto"
       class="lazy lazyload"
     />
   </template>
-  <img :src="ogImage" :alt="src" class="lazy lazyload" />
 </template>
 
 <script setup>

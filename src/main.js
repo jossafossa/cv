@@ -8,6 +8,7 @@ import Bubble from "./assets/js/Bubble";
 import { createApp } from "vue";
 import App from "./App.vue";
 import "font-awesome/css/font-awesome.min.css";
+import "@/assets/css/style.scss";
 // photoswipe
 import "photoswipe/dist/photoswipe.css";
 

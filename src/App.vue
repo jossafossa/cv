@@ -1,6 +1,6 @@
 <script setup>
 import data from "@/assets/data.js";
-// import VueMarkdown from "vue-markdown-render";
+import VueMarkdown from "vue-markdown-render";
 import cardProject from "./components/cardProject.vue";
 import ResponsiveImage from "./components/ResponsiveImage.vue";
 import { getColor } from "@/assets/utils.js";
@@ -93,7 +93,7 @@ const getFilterStyle = (projects) => {
         <div class="container small">
           <h1 class="line-left">{{ section.title }}</h1>
           <div class="text-container">
-            <p>{{ section.content }}</p>
+            <VueMarkdown :source="section.content"></VueMarkdown>
           </div>
         </div>
       </section>
@@ -251,8 +251,6 @@ const getFilterStyle = (projects) => {
 </template>
 
 <style lang="scss">
-@import "@/assets/css/style.scss";
-
 [data-type-target] {
   display: none;
 }
