@@ -15,17 +15,19 @@ export function getSources(src) {
 
   for (let format of [...formats]) {
     let srcsets = [];
+    let images = [];
     for (let size of sizes) {
       let img = `/img/${name}${size.suffix}.${format}`;
+      images.push(img);
       srcsets.push(`${img} ${size.width}w`);
     }
     sources.push({
       srcset: srcsets.join(", "),
       format: `image/${format}`,
+      images,
     });
   }
 
-  console.log(sources);
   return sources;
 }
 

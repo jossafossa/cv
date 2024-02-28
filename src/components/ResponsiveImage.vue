@@ -7,7 +7,7 @@
       class="lazyload"
     />
   </template>
-  <img :src="ogImage" :alt="src" data-sizes="auto" class="lazyload" />
+  <img :srcset="ogImage" :alt="src" data-sizes="auto" />
 </template>
 
 <script setup>
@@ -24,7 +24,11 @@ const props = defineProps({
 const sources = ref("");
 
 onMounted(async () => {
-  ogImage.value = `/img/${props.src}`;
-  sources.value = await getSources(props.src);
+  let sourcesArr = await getSources(props.src);
+  sources.value = sourcesArr;
+  console.log(sourcesArr);
+
+  // last source is the original image
+  ogImage.value = sourcesArr[0].images[0];
 });
 </script>
