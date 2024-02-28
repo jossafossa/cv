@@ -243,6 +243,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
           description:
             "Onze submission voor de Ludum Dare 51. Peter heeft een nieuwe telefoon nodig. Kun jij voorkomen dat zijn oude telefoon crasht? Ondertussen leer je Peter kennen.",
           image: "peter-os.webp",
+          images: ["peter-1.webp", "peter-2.webp", "peter-3.webp"],
           tags: ["Pixel Art", "Game Jam", "Unity"],
         },
         {
