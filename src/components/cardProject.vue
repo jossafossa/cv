@@ -18,8 +18,7 @@
           {{ project.title }}
         </h2>
 
-        <vue-markdown v-if="project.description" :source="project.description">
-        </vue-markdown>
+        <p v-if="project.description" :source="project.description"></p>
       </section>
 
       <footer>
@@ -38,8 +37,7 @@
 <script setup>
 import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import OptionalLink from "@/components/optionalLink.vue";
-import ImageLightbox from "@/components/ImageLightbox.vue";
-import VueMarkdown from "vue-markdown-render";
+import ImageLightbox from "@/components/ImagegLightbox.vue";
 import { getColor } from "@/assets/utils.js";
 defineProps({
   project: Object,

@@ -1,7 +1,6 @@
 <script setup>
 import data from "@/assets/data.js";
-import VueMarkdown from "vue-markdown-render";
-import optionalLink from "./components/optionalLink.vue";
+// import VueMarkdown from "vue-markdown-render";
 import cardProject from "./components/cardProject.vue";
 import ResponsiveImage from "./components/ResponsiveImage.vue";
 import { getColor } from "@/assets/utils.js";
@@ -94,7 +93,7 @@ const getFilterStyle = (projects) => {
         <div class="container small">
           <h1 class="line-left">{{ section.title }}</h1>
           <div class="text-container">
-            <vue-markdown :source="section.content"></vue-markdown>
+            <p>{{ section.content }}</p>
           </div>
         </div>
       </section>

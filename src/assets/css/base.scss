@@ -28,3 +28,9 @@ picture {
 .lazy.lazyloaded {
   filter: blur(0);
 }
+
+.pswp__img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
