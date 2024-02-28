@@ -15,7 +15,7 @@ const random = (arr) =>
 // show hidden if url has ?hidden
 const showHidden = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.has("hidden");
+  return urlParams.has("extended");
 };
 
 /**
@@ -110,6 +110,7 @@ const getFilterStyle = (projects) => {
             </component>
 
             <div class="hstack f-1">
+              <strong>Filter op: </strong>
               <input
                 type="radio"
                 name="type"
@@ -193,7 +194,7 @@ const getFilterStyle = (projects) => {
                     <div class="skill-table__title">{{ skill.title }}</div>
                     <div class="skill-table__content">
                       <div class="skill-table__row" v-for="item in skill.items">
-                        <div>{{ item.label }}</div>
+                        <div class="">{{ item.label }}</div>
                         <div :value="item.rating" class="rating">
                           <i
                             v-for="index in item.rating"

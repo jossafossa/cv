@@ -148,6 +148,9 @@ h6 {
   position: absolute;
   right: 0;
   margin: auto;
+
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .marked,
@@ -162,6 +165,8 @@ h6 {
   border: 0px solid transparent;
   outline: none;
   transition: 0.2s ease;
+  border-radius: 1rem;
+  font-weight: bold;
 
   > i {
     font-size: 120%;
@@ -302,10 +307,12 @@ table.fancy tr:last-child > td:first-child:after {
   left: 0;
   height: 2rem;
   background: var(--primary-color-fancy);
+  border-radius: 1rem 1rem 0 0;
 }
 
 table.fancy tr:last-child > td:first-child:after {
   top: 100%;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .header {
@@ -337,8 +344,8 @@ table.fancy tr:last-child > td:first-child:after {
 
 .header__photo > img {
   border-radius: 100%;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
 }
 
 .header__content {
@@ -379,6 +386,7 @@ table.fancy tr:last-child > td:first-child:after {
   padding-left: 2rem;
   position: relative;
   z-index: 2;
+  border-radius: 1rem;
 }
 
 .header__information > table {
@@ -466,6 +474,7 @@ table.fancy tr:last-child > td:first-child:after {
   height: var(--height);
   margin-right: 0rem;
   font-weight: 700;
+  border-top-left-radius: 1rem;
   text-transform: uppercase;
 
   @media screen and (min-width: 720px) {
@@ -500,6 +509,7 @@ table.fancy tr:last-child > td:first-child:after {
   filter: contrast(1.15);
   padding: 0.5rem;
   padding-right: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .timeline__item__date:before {
@@ -534,6 +544,10 @@ table.fancy tr:last-child > td:first-child:after {
 
 .timeline__item section {
   position: relative;
+}
+
+.timeline__item section > * {
+  border-radius: 1rem;
 }
 
 .timeline__item section:after,
@@ -594,6 +608,7 @@ table.fancy tr:last-child > td:first-child:after {
 .skills-container > .skill-table:first-child .skill-table__title {
   -webkit-box-shadow: none;
   box-shadow: none;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .skill-table__row {
@@ -609,16 +624,25 @@ table.fancy tr:last-child > td:first-child:after {
 }
 
 .skill-table__content {
+  --offset: 200px;
+  margin-left: calc(-1 * var(--offset));
   color: #fff;
   background: var(--bg-light-fancy);
-  -webkit-box-shadow: -200px 0 0 var(--bg-light-1);
-  box-shadow: -200px 0 0 var(--bg-light-1);
+  // -webkit-box-shadow: -200px 0 0 var(--bg-light-1);
+  // box-shadow: -200px 0 0 var(--bg-light-1);
+  border-radius: 1rem;
+
+  > *:nth-child(1) {
+    padding-left: 0;
+  }
+
+  .skill-table__row > *:nth-child(1) {
+    padding-left: calc(var(--offset) + 2rem) !important;
+  }
 }
 
 .skill-table__content > .skill-table__row:nth-child(2n) {
   background: hsla(0, 0%, 100%, 0.1);
-  -webkit-box-shadow: -200px 0 0 hsla(0, 0%, 100%, 0.1);
-  box-shadow: -200px 0 0 hsla(0, 0%, 100%, 0.1);
 }
 
 .skill-table__row > * {
@@ -629,7 +653,6 @@ table.fancy tr:last-child > td:first-child:after {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-left: 1rem;
 }
 
 .skill-table__row > :nth-child(2) {
@@ -647,6 +670,10 @@ table.fancy tr:last-child > td:first-child:after {
   width: 8.5rem;
 }
 
+.skill-table__row:nth-last-child(1) {
+  border-bottom-right-radius: 1rem;
+}
+
 .skill-table__content .skill-table__row:first-child > :nth-child(2):before,
 .skill-table__content .skill-table__row:last-child > :nth-child(2):after {
   content: "";
@@ -659,6 +686,11 @@ table.fancy tr:last-child > td:first-child:after {
   left: 0;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.skill-table__content .skill-table__row:last-child {
+  border-bottom-left-radius: 1rem;
 }
 
 .skill-table__content .skill-table__row:last-child > :nth-child(2):after {
@@ -666,6 +698,7 @@ table.fancy tr:last-child > td:first-child:after {
   top: auto;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
+  border-radius: 0 0 1rem 1rem;
 }
 
 .rating {
@@ -703,14 +736,15 @@ table.fancy tr:last-child > td:first-child:after {
 
 .qualities__row > :first-child {
   padding: 1rem;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   background: var(--primary-color-fancy);
   font-size: 2em;
   color: #fff;
+  border-radius: 1rem;
 }
 
 .qualities__row > :nth-child(2) {
@@ -722,6 +756,7 @@ table.fancy tr:last-child > td:first-child:after {
   flex: 1;
   -webkit-box-shadow: 0.5rem 0 0 0 rgba(0, 0, 0, 0.1) inset;
   box-shadow: inset 0.5rem 0 0 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0 1rem 1rem 0;
 }
 
 .interests-container {
