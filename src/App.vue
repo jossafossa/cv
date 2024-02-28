@@ -62,9 +62,11 @@ const getFilterStyle = (projects) => {
       <div class="container">
         <div class="row header__inner">
           <div class="col col-12 col-lg-8 header__left">
-            <picture class="header__photo">
-              <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
-            </picture>
+            <div class="header__photo">
+              <picture>
+                <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
+              </picture>
+            </div>
             <div class="header__content hor-center">
               <h1>{{ data.name }}</h1>
               <div class="key-value">
