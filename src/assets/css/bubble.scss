@@ -24,6 +24,12 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .bubble {
+    display: none;
+  }
+}
+
 .bubble {
   --size: 10px;
   --background: black;

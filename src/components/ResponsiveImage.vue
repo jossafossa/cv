@@ -4,6 +4,7 @@
       :data-srcset="source.srcset"
       :type="source.format"
       data-sizes="auto"
+      :alt="props.src"
       class="lazy lazyload"
     />
   </template>
