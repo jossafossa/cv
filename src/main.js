@@ -48,3 +48,5 @@ for (let i = 0; i < bubbles; i++) {
     },
   });
 }
+
+document.body.classList.remove("preload");

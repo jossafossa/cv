@@ -2,6 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- preload fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Quicksand:wght@400;600&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="/assets/fontawesome-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       rel="icon"
       type="image/svg+xml"
@@ -12,7 +30,7 @@
     <script type="module" crossorigin src="./assets/index.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index.css">
   </head>
-  <body>
+  <body class="preload">
     <div id="app"></div>
   </body>
 </html>
