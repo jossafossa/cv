@@ -1,3 +1,5 @@
+import { marked } from "marked";
+
 export default {
   name: "Joost Hobma",
   image: "./assets/img/jossafossa.jpg",
@@ -33,16 +35,16 @@ export default {
     {
       type: "content",
       title: "Over mij",
-      content: `
+      content: marked.parse(`
 Hoi, ik ben Joost, een **full stack** developer uit Friesland, maar gehuisvest in Groningen. Ik ben al sinds 2016 werkzaam bij verschillende bedrijven in webdevelopment land. Ik heb veel ervaring met het bouwen van custom **WordPress** thema's van **Front-end** tot **Back-end**, van statische content tot **Webshops**, **Configurators**, **API-koppelingen** en **Plug-ins** bouwen. Dit is niet alleen WordPress specifieke kennis, maar ook veel **JavaScript** (custom, **VueJS**, **React**), **SCSS**, **PHP** en **HTML**. Als ik thuis ben, slinger ik meestal meteen de computer aan om thuis verder te werken aan mijn eigen projecten. Ik raak niet snel uitgekeken op het webdevelopment vak en ben altijd op zoek naar nieuwe dingen om te bouwen.
 
 
-Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset). Ook heb ik meegedaan aan meerdere **Hackathons** en **Game Jams**. Tijdens Game Jams heb ik mijn skills kunnen uitbreiden met **pixel art**, **3D Modeling** en **Game Development**. Tijdens Game Jams moet je werken met een strakke deadline en dat is een goede manier te leren werken onder druk, knopen door te hakken en snel te schakelen.`,
+Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game development**. Ik heb laatst mijn eerste pack met game assets uitgebracht op [itch.io](https://jossafossa.itch.io/mansion-indoor-tileset). Ook heb ik meegedaan aan meerdere **Hackathons** en **Game Jams**. Tijdens Game Jams heb ik mijn skills kunnen uitbreiden met **pixel art**, **3D Modeling** en **Game Development**. Tijdens Game Jams moet je werken met een strakke deadline en dat is een goede manier te leren werken onder druk, knopen door te hakken en snel te schakelen.`),
     },
     {
       type: "content",
       title: "Dit vind ik belangrijk",
-      content: `
+      content: marked.parse(`
 - Ik houd van **Leesbare code**. Zelfs zonder documentatie moet de code duidelijk zijn.
 - Ik houd van **modulaire en herbruikbare code**. Waar mogelijk maak ik gebruik van **componenten**.
 - Ik houd van **atomic functies** met 1 simpele functie.
@@ -58,7 +60,7 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
 - Ik houd van andere **mensen helpen** en **kennis delen**.
 - Ik houd van duidelijke **efficiënt communicatie**.
 
-`,
+`),
     },
 
     {

@@ -17,6 +17,9 @@ dependencies:
   lazysizes:
     specifier: ^5.3.2
     version: 5.3.2
+  marked:
+    specifier: ^12.0.0
+    version: 12.0.0
   photoswipe:
     specifier: ^5.4.3
     version: 5.4.3
@@ -1078,6 +1081,12 @@ packages:
       linkify-it: 3.0.3
       mdurl: 1.0.1
       uc.micro: 1.0.6
+    dev: false
+
+  /marked@12.0.0:
+    resolution: {integrity: sha512-Vkwtq9rLqXryZnWaQc86+FHLC6tr/fycMfYAhiOIXkrNmeGAyhSxjqu0Rs1i0bBqw5u0S7+lV9fdH2ZSVaoa0w==}
+    engines: {node: '>= 18'}
+    hasBin: true
     dev: false
 
   /mdurl@1.0.1:
