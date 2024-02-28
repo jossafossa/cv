@@ -1,0 +1,33 @@
+// ripple
+.ripple-container {
+  --ripple-size: 20%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.ripple {
+  width: var(--ripple-size);
+  padding-top: var(--ripple-size);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+
+  animation: 1.5s ripple ease-out forwards;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(8);
+  }
+}

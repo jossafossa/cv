@@ -4,6 +4,7 @@ import VueMarkdown from "vue-markdown-render";
 import optionalLink from "./components/optionalLink.vue";
 import cardProject from "./components/cardProject.vue";
 import ResponsiveImage from "./components/ResponsiveImage.vue";
+import { getColor } from "@/assets/utils.js";
 
 const random = (arr) =>
   arr
@@ -117,7 +118,7 @@ const getFilterStyle = (projects) => {
                 checked
                 class="hidden"
               />
-              <label for="all" class="tag">All</label>
+              <label for="all" class="tag has-effect">All</label>
               <template v-for="filter in getFilters(section.projects)">
                 <input
                   type="radio"
@@ -126,13 +127,18 @@ const getFilterStyle = (projects) => {
                   :data-type="filter.tag"
                   class="hidden"
                 />
-                <label :for="filter.tag" class="tag"
+                <label
+                  :for="filter.tag"
+                  class="tag has-effect"
+                  :style="{
+                    '--accent': getColor(filter.tag),
+                  }"
                   >{{ filter.tag }} ({{ filter.count }})</label
                 >
               </template>
             </div>
 
-            <div class="row row-1 row-md-2 row-lg-3">
+            <div class="row row-1 row-md-2 row-lg-3 stretch-cards">
               <template v-for="project in random(section.projects)">
                 <div
                   class="col"
@@ -149,7 +155,7 @@ const getFilterStyle = (projects) => {
 
       <section v-if="section.type === 'educations'" class="section bg-dark">
         <div class="container no-padding">
-          <h1 class="section-title">{{ section.title }}</h1>
+          <h1 class="section-title has-effect">{{ section.title }}</h1>
           <div class="timeline">
             <div class="timeline__items">
               <div class="timeline__item" v-for="item in section.educations">
@@ -157,12 +163,16 @@ const getFilterStyle = (projects) => {
                   <div class="timeline__item__title">{{ item.title }}</div>
                   <div class="timeline__item__date">{{ item.time }}</div>
                 </header>
-                <table class="timeline__item__content">
-                  <tr v-for="(value, key) in item.attributes">
-                    <td>{{ key }}</td>
-                    <td>{{ value }}</td>
-                  </tr>
-                </table>
+                <section>
+                  <div class="has-effect">
+                    <table class="timeline__item__content">
+                      <tr v-for="(value, key) in item.attributes">
+                        <td>{{ key }}</td>
+                        <td>{{ value }}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </section>
               </div>
             </div>
           </div>
@@ -208,14 +218,17 @@ const getFilterStyle = (projects) => {
                       v-for="item in section.qualities.items"
                     >
                       <i :class="['fa', item.icon]"></i>
-                      <div>{{ item.label }}</div>
+                      <div class="has-effect">{{ item.label }}</div>
                     </div>
                   </div>
                 </div>
                 <div id="interests">
                   <h1 class="line-right">{{ section.interests.title }}</h1>
                   <div class="interests-container">
-                    <div class="marked" v-for="item in section.interests.items">
+                    <div
+                      class="marked has-effect"
+                      v-for="item in section.interests.items"
+                    >
                       <i v-if="item.icon" :class="['fa', item.icon]"></i>
                       {{ item.label }}
                     </div>
@@ -227,7 +240,7 @@ const getFilterStyle = (projects) => {
         </div>
       </section>
     </template>
-    <footer class="bg-dark">
+    <footer id="footer" class="bg-dark">
       <div class="container">
         <p>{{ data.footer.label }}</p>
       </div>

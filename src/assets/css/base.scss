@@ -9,3 +9,10 @@
 .ratio-tall {
   aspect-ratio: 3/4;
 }
+
+.stretch-cards {
+  > * > *,
+  > * > a > * {
+    height: 100%;
+  }
+}

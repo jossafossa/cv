@@ -1,6 +1,6 @@
 <template>
   <optional-link :href="project.url">
-    <article class="card-project vstack g-1">
+    <article class="card-project vstack g-1 has-effect">
       <header v-if="project.image">
         <picture class="ratio-wide">
           <responsive-image :src="project.image"></responsive-image>
@@ -20,13 +20,17 @@
 
         <vue-markdown v-if="project.description" :source="project.description">
         </vue-markdown>
+      </section>
 
+      <footer>
         <div class="hstack g-half" v-if="project.tags">
           <template v-for="tag in project.tags">
-            <span class="tag">{{ tag }}</span>
+            <span class="tag" :style="{ '--accent': getColor(tag) }">{{
+              tag
+            }}</span>
           </template>
         </div>
-      </section>
+      </footer>
     </article>
   </optional-link>
 </template>
@@ -36,14 +40,21 @@ import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import OptionalLink from "@/components/optionalLink.vue";
 import ImageLightbox from "@/components/ImageLightbox.vue";
 import VueMarkdown from "vue-markdown-render";
+import { getColor } from "@/assets/utils.js";
 defineProps({
   project: Object,
 });
 </script>
 
 <style lang="scss" scoped>
+.card-project {
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
 header {
   position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 
   > .card-links {
     position: absolute;
@@ -51,5 +62,13 @@ header {
     right: 0;
     padding: 1rem;
   }
+}
+
+section {
+  flex: 1;
+}
+
+footer {
+  padding-bottom: 1rem;
 }
 </style>

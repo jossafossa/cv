@@ -1,14 +1,14 @@
 .tag {
-  padding: 0.25rem 0.5rem;
-  background-color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  background-color: var(--accent, var(--primary-color));
   font-weight: bold;
   font-size: 80%;
+  border-radius: 100px;
 
   input + & {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 100px;
     --size: 1rem;
     --ball-size: 0.5rem;
     cursor: pointer;

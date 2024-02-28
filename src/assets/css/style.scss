@@ -3,6 +3,9 @@
 @import "reset.scss";
 @import "tags.scss";
 @import "base.scss";
+@import "ripple.scss";
+@import "bulge.scss";
+@import "bubble.scss";
 
 :root {
   --bg-light-fancy: linear-gradient(90deg, #41525d, #313750);
@@ -21,7 +24,7 @@ body {
   font-family: Quicksand, sans-serif;
   color: white;
   font-size: 80%;
-  line-height: 1.6;
+  line-height: 1.8;
   background-color: #11141c;
 
   @media screen and (min-width: 720px) {
@@ -158,6 +161,7 @@ h6 {
   gap: 0.5rem;
   border: 0px solid transparent;
   outline: none;
+  transition: 0.2s ease;
 
   > i {
     font-size: 120%;
@@ -520,7 +524,7 @@ table.fancy tr:last-child > td:first-child:after {
   padding-left: 2rem;
 }
 
-.timeline__item__content:before {
+.timeline__item section:before {
   width: var(--center-offset);
   height: 0.5rem;
   -webkit-transform: translateX(100%);
@@ -528,8 +532,12 @@ table.fancy tr:last-child > td:first-child:after {
   background: #fff;
 }
 
-.timeline__item__content:after,
-.timeline__item__content:before {
+.timeline__item section {
+  position: relative;
+}
+
+.timeline__item section:after,
+.timeline__item section:before {
   content: "";
   position: absolute;
   right: 0;
@@ -538,7 +546,7 @@ table.fancy tr:last-child > td:first-child:after {
   margin: auto;
 }
 
-.timeline__item__content:after {
+.timeline__item section:after {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -548,14 +556,14 @@ table.fancy tr:last-child > td:first-child:after {
   background: var(--bg-dark-fancy);
 }
 
-.timeline__item:nth-child(2n) .timeline__item__content:before {
+.timeline__item:nth-child(2n) section:before {
   left: 0;
   right: auto;
   -webkit-transform: translate(-100%);
   transform: translate(-100%);
 }
 
-.timeline__item:nth-child(2n) .timeline__item__content:after {
+.timeline__item:nth-child(2n) section:after {
   right: auto;
   left: 0;
   -webkit-transform: translateX(calc(var(--center-offset) * -1 - 1rem));
@@ -729,7 +737,7 @@ table.fancy tr:last-child > td:first-child:after {
   margin-bottom: 0.5rem;
 }
 
-footer {
+#footer {
   color: #fff;
   padding: 1rem;
 }
