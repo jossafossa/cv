@@ -45,20 +45,20 @@ Naast webdevelopment ben ik ook een groot fan van **pixel art** en **game develo
       type: "content",
       title: "Dit vind ik belangrijk",
       content: marked.parse(`
-- Ik houd van **Leesbare code**. Zelfs zonder documentatie moet de code duidelijk zijn.
+- Ik houd van **Leesbare code**. Zonder documentatie zou de code duidelijk moeten zijn.
 - Ik houd van **modulaire en herbruikbare code**. Waar mogelijk maak ik gebruik van **componenten**.
-- Ik houd van **atomic functies** met 1 simpele functie.
+- Ik houd van **atomic functies**.
 - Ik houd van **lightweight** oplossingen. Voor webdevelopment zoek ik eerst de oplossing in HTML dan CSS en dan JavaScript.
 - Ik houd van **early return** boven nested if statements.
 - Ik houd van veilige code. 
-- Ik houd van **semantisch kloppende HTML en CSS**.
-- Ik houd van duidelijke **coding standards**.
-- Ik houd van \`var()\`, \`flexbox\`, \`grid\`, \`gaps\`, \`:has()\`, \`:where()\`, \`<dialog>\`, \`async\`, \`await\`, \`import()\`, \`Promises\`, \`?.\`, \`...\` & \`const\`. 
+- Ik houd van **semantische HTML en CSS**.
+- Ik houd van **coding standards**.
 - Ik houd van een efficiënte en consistente workflow.
+- Ik houd van \`var()\`, \`flexbox\`, \`grid\`, \`gaps\`, \`:has()\`, \`:where()\`, \`<dialog>\`, \`async\`, \`await\`, \`import()\`, \`Promises\`, \`?.\`, \`...\` & \`const\`. 
 - Ik houd van consistente user interfaces.
 - Ik houd een **gebruiksvriendelijke** backend. 
 - Ik houd van andere **mensen helpen** en **kennis delen**.
-- Ik houd van duidelijke **efficiënt communicatie**.
+- Ik houd van **efficiënt communicatie**.
 
 `),
     },
