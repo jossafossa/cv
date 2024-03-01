@@ -7,14 +7,46 @@
 @import "bulge.scss";
 @import "bubble.scss";
 
+@function p3($r, $g, $b) {
+  @return color(display-p3 calc(#{$r}/ 255) calc(#{$g}/ 255) calc(#{$b}/ 255));
+}
+
+@mixin p3($property: "color", $color) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  #{$property}: $color;
+  #{$property}: p3($red, $green, $blue);
+}
+
 :root {
-  --bg-light-fancy: linear-gradient(90deg, #41525d, #313750);
-  --bg-dark-fancy: linear-gradient(90deg, #1f282e, #101424);
-  --bg-light-1: #41525d;
-  --bg-light-2: #313750;
-  --bg-dark: #1e2428;
-  --primary-color-fancy: linear-gradient(50deg, #f99864, #f38882);
-  --primary-color: #f38882;
+  @include p3("--bg-light-1", rgb(65, 82, 93));
+  @include p3("--bg-light-2", rgb(49, 55, 80));
+  @include p3("--bg-dark-1", rgb(31, 40, 46));
+  @include p3("--bg-dark-2", rgb(16, 20, 36));
+  @include p3("--bg-dark", rgb(30, 36, 40));
+  @include p3("--primary-color-1", rgb(249, 152, 100));
+  @include p3("--primary-color-2", rgb(243, 136, 130));
+  // --bg-light-1: rgb(65, 82, 93);
+  // --bg-light-2: rgb(49, 55, 80);
+  // --bg-dark-1: rgb(31, 40, 46);
+  // --bg-dark-2: rgb(16, 20, 36);
+  // --bg-dark: rgb(30, 36, 40);
+  // --primary-color-1: rgb(249, 152, 100);
+  // --primary-color-2: rgb(243, 136, 130);
+  --primary-color: var(--primary-color-2);
+
+  --bg-light-fancy: linear-gradient(
+    90deg,
+    var(--bg-light-1),
+    var(--bg-light-2)
+  );
+  --primary-color-fancy: linear-gradient(
+    50deg,
+    var(--primary-color-1),
+    var(--primary-color-2)
+  );
+  --bg-dark-fancy: linear-gradient(90deg, var(--bg-dark-1), var(--bg-dark-2));
 }
 
 body {
