@@ -6,6 +6,7 @@ export default class Bubble {
         element: document.documentElement,
         delay: 0,
         background: false,
+        startPosition: { x: 0, y: 0 },
       },
       settings
     );
@@ -14,8 +15,17 @@ export default class Bubble {
     this.smoothFactor = settings.smoothFactor;
     this.background = settings.background;
 
-    this.delayBuffer = new Array(this.delay).fill([0, 0]);
-    this.smoothBuffer = [];
+    this.pos = settings.startPosition;
+    console.log(this.pos);
+    this.element.style.setProperty("--x", `${this.pos.x}px`);
+    this.element.style.setProperty("--y", `${this.pos.y}px`);
+
+    this.delayBuffer = new Array(this.delay).fill([this.pos.x, this.pos.y]);
+    this.smoothBuffer = new Array(this.smoothFactor).fill([
+      this.pos.x,
+      this.pos.y,
+    ]);
+    console.log(this.smoothBuffer);
     document.body.addEventListener("pointermove", (e) => {
       this.pos = {
         x: e.x,
@@ -42,6 +52,7 @@ export default class Bubble {
     if (this.smoothBuffer.length > this.smoothFactor) {
       this.smoothBuffer.shift();
     }
+
     return this.smoothBuffer.reduce((a, c) => [a[0] + c[0], a[1] + c[1]]);
   }
 
@@ -53,12 +64,11 @@ export default class Bubble {
     let { x, y } = pos;
 
     [x, y] = this.smooth(x, y);
+    [x, y] = [x / this.smoothFactor, y / this.smoothFactor];
 
     // setup delay
     this.delayBuffer.push([x, y]);
     [x, y] = this.delayBuffer.shift();
-
-    [x, y] = [x / this.smoothFactor, y / this.smoothFactor];
 
     // 		// calc rotation using old and new pos
     // 		if ( this.oldPos ) {
@@ -78,8 +88,6 @@ export default class Bubble {
 
     this.element.style.setProperty("--x", `${x}px`);
     this.element.style.setProperty("--y", `${y}px`);
-
-    this.element.style.setProperty("--delay", `${(1000 / 60) * this.delay}ms`);
 
     if (this.background) {
       this.element.style.setProperty("--background", this.background(x, y));

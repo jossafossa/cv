@@ -31,14 +31,28 @@ bulges.forEach((bulge) => {
   });
 });
 
-const bubbles = 4;
-const bubbleSmoothness = 5;
+const bubbles = 1;
+const bubbleSmoothness = 1;
+let i = 0;
+// for (let i = 0; i < bubbles; i++) {
+// const bubble = document.createElement("div");
+// bubble.classList.add("bubble");
+// document.body.append(bubble);
 
-for (let i = 0; i < bubbles; i++) {
+// new Bubble({
+//   smoothFactor: bubbleSmoothness + i,
+//   element: bubble,
+//   delay: i,
+//   background: (x, y) => {
+//     return `rgba(255,255,255, ${1 - (1 / bubbles) * i})`;
+//   },
+// });
+// }
+document.body.addEventListener("pointerdown", (e) => {
+  if (i > 20) return;
   const bubble = document.createElement("div");
   bubble.classList.add("bubble");
   document.body.append(bubble);
-
   new Bubble({
     smoothFactor: bubbleSmoothness + i,
     element: bubble,
@@ -46,7 +60,9 @@ for (let i = 0; i < bubbles; i++) {
     background: (x, y) => {
       return `rgba(255,255,255, ${1 - (1 / bubbles) * i})`;
     },
+    startPosition: { x: e.x, y: e.y },
   });
-}
+  i++;
+});
 
 document.body.classList.remove("preload");

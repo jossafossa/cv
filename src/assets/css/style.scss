@@ -617,8 +617,8 @@ table.fancy tr:last-child > td:first-child:after {
   display: -ms-flexbox;
   display: flex;
 
-  > .suffix {
-    @media screen and (max-width: 720px) {
+  @media screen and (max-width: 720px) {
+    > .suffix {
       display: none;
     }
   }
@@ -632,7 +632,9 @@ table.fancy tr:last-child > td:first-child:after {
   // -webkit-box-shadow: -200px 0 0 var(--bg-light-1);
   // box-shadow: -200px 0 0 var(--bg-light-1);
   border-radius: 1rem;
-
+  @media screen and (max-width: 720px) {
+    border-radius: 1rem 0 0 1rem;
+  }
   > *:nth-child(1) {
     padding-left: 0;
   }
