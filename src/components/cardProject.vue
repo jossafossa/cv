@@ -18,7 +18,7 @@
           {{ project.title }}
         </h2>
 
-        <p v-if="project.description" :source="project.description"></p>
+        <p v-if="project.description">{{ project.description }}</p>
       </section>
 
       <footer>
