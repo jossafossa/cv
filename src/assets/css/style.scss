@@ -53,7 +53,6 @@
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: Quicksand, sans-serif;
@@ -480,6 +479,20 @@ table.fancy tr:last-child > td:first-child:after {
   width: calc(50% - var(--center-offset));
   position: relative;
   isolation: isolate;
+  transform: translateY(calc(var(--s) * var(--y)));
+  --s: 0px;
+
+  @media screen and (min-width: 720px) {
+    --s: -300px;
+    &:nth-child(even) {
+      --s: -400px;
+    }
+
+    &:nth-child(4n),
+    &:nth-child(4n + 1) {
+      --s: -200px;
+    }
+  }
 
   &:before {
     content: "";

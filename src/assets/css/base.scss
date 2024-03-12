@@ -38,3 +38,14 @@ picture {
 .preload * {
   transition-duration: 0s;
 }
+
+html {
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  overflow: auto;
+  scroll-behavior: smooth;
+}

@@ -5,6 +5,7 @@ import Ripple from "./assets/js/Ripple";
 import Bulge from "./assets/js/Bulge";
 import Bubble from "./assets/js/Bubble";
 import StripeLink from "./assets/js/StripeLink.js";
+import ScrollAnimate from "./assets/js/ScrollAnimate.js";
 
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -69,4 +70,9 @@ document.body.classList.remove("preload");
 
 new StripeLink(".button", {
   copyContent: true,
+});
+
+new ScrollAnimate({
+  root: document.body,
+  elements: document.querySelectorAll(".transform-container"),
 });

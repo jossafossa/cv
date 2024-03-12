@@ -150,7 +150,10 @@ const getFilterStyle = (projects) => {
         </div>
       </section>
 
-      <section v-if="section.type === 'educations'" class="section bg-dark">
+      <section
+        v-if="section.type === 'educations'"
+        class="section bg-dark transform-container"
+      >
         <div class="container no-padding">
           <h1 class="section-title has-effect">{{ section.title }}</h1>
           <div class="timeline">
