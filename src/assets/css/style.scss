@@ -29,6 +29,7 @@
   @include p3("--bg-dark", rgb(30, 36, 40));
   @include p3("--primary-color-1", rgb(249, 152, 100));
   @include p3("--primary-color-2", rgb(243, 136, 130));
+  @include p3("--primary-color-light", rgb(232, 221, 199));
   // --bg-light-1: rgb(65, 82, 93);
   // --bg-light-2: rgb(49, 55, 80);
   // --bg-dark-1: rgb(31, 40, 46);
@@ -477,6 +478,19 @@ table.fancy tr:last-child > td:first-child:after {
 
 .timeline__item {
   width: calc(50% - var(--center-offset));
+  position: relative;
+  isolation: isolate;
+
+  &:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(var(--primary-color), var(--bg-light-1));
+    filter: blur(70px);
+    scale: 1.4;
+    opacity: 0.1;
+  }
 }
 
 .timeline__item:nth-child(2n) {

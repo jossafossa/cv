@@ -49,21 +49,20 @@ let i = 0;
 //   },
 // });
 // }
+let from = 20;
 document.body.addEventListener("pointerdown", (e) => {
-  if (i > 20) return;
+  i++;
+  if (i < from || i > 30) return;
   const bubble = document.createElement("div");
   bubble.classList.add("bubble");
   document.body.append(bubble);
+  let intensity = i - from;
   new Bubble({
-    smoothFactor: bubbleSmoothness + i,
+    smoothFactor: bubbleSmoothness + intensity,
     element: bubble,
-    delay: i,
-    background: (x, y) => {
-      return `rgba(255,255,255, ${1 - (1 / bubbles) * i})`;
-    },
+    delay: intensity,
     startPosition: { x: e.x, y: e.y },
   });
-  i++;
 });
 
 document.body.classList.remove("preload");

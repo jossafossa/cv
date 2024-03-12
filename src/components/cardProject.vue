@@ -1,5 +1,5 @@
 <template>
-  <optional-link :href="project.url">
+  <optional-link :href="project.url" target="blank">
     <article class="card-project vstack g-1 has-effect">
       <header v-if="project.image">
         <picture class="ratio-wide">
