@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Quicksand:wght@400;600&display=swap);
 @import "grid.scss";
 @import "reset.scss";
+@import "buttons.scss";
 @import "tags.scss";
 @import "base.scss";
 @import "ripple.scss";
 @import "bulge.scss";
 @import "bubble.scss";
+@import "bubble-image.scss";
 
 @function p3($r, $g, $b) {
   @return color(display-p3 calc(#{$r}/ 255) calc(#{$g}/ 255) calc(#{$b}/ 255));
@@ -185,8 +187,7 @@ h6 {
   overflow: hidden;
 }
 
-.marked,
-.button {
+.marked {
   padding: 0.5rem 0.5rem;
   background: var(--primary-color-fancy);
   color: #fff;

@@ -4,6 +4,7 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import Ripple from "./assets/js/Ripple";
 import Bulge from "./assets/js/Bulge";
 import Bubble from "./assets/js/Bubble";
+import StripeLink from "./assets/js/StripeLink.js";
 
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -66,3 +67,7 @@ document.body.addEventListener("pointerdown", (e) => {
 });
 
 document.body.classList.remove("preload");
+
+new StripeLink(".button", {
+  copyContent: true,
+});

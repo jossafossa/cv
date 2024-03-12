@@ -1,0 +1,67 @@
+%fancy-slide-button {
+  --border: 4px;
+  --padding: 16px;
+  --height: 48px;
+  --background: black;
+  --color: white;
+  --background-active: white;
+  --color-active: black;
+  padding: 0 var(--padding);
+  height: var(--height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  color: var(--color);
+  position: relative;
+  font-weight: bold;
+  // overflow: hidden;
+
+  > .effect {
+    --end: var(--border);
+    --start: var(--border);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-active);
+    color: var(--color-active);
+    white-space: nowrap;
+    z-index: 2;
+    pointer-events: none;
+    clip-path: polygon(
+      var(--start) var(--border),
+      var(--end) var(--border),
+      var(--end) calc(100% - var(--border)),
+      var(--start) calc(100% - var(--border))
+    );
+
+    &.animate-in {
+      --end: calc(100% - var(--border));
+    }
+    &.animate-out {
+      --start: calc(100% - var(--border));
+    }
+  }
+
+  &.is-small {
+    --height: #{rfs-value(32px)};
+  }
+
+  &.is-icon {
+    width: var(--height);
+    padding: 0;
+  }
+}
+
+.button {
+  @extend %fancy-slide-button;
+  --border: 3px;
+  --background: var(--primary-color-fancy);
+  --background-active: var(--bg-dark-fancy);
+  --color-active: var(--primary-color-2);
+}

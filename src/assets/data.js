@@ -2,7 +2,13 @@ import { marked } from "marked";
 
 export default {
   name: "Joost Hobma",
-  image: "./assets/img/jossafossa.jpg",
+  images: [
+    "jossafossa.jpg",
+    "jossafossa-2.jpg",
+    "jossafossa-3.jpg",
+    "jossafossa-4.jpg",
+    "jossafossa-5.jpg",
+  ],
   linksLabel: "Portfolio:",
   links: [
     {

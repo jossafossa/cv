@@ -1,7 +1,7 @@
 <script setup>
 import data from "@/assets/data.js";
 import cardProject from "./components/cardProject.vue";
-import ResponsiveImage from "./components/ResponsiveImage.vue";
+import BubbleImage from "./components/BubbleImage.vue";
 import { getColor } from "@/assets/utils.js";
 
 const random = (arr) =>
@@ -61,16 +61,14 @@ const getFilterStyle = (projects) => {
         <div class="row header__inner">
           <div class="col col-12 col-lg-8 header__left">
             <div class="header__photo">
-              <picture>
-                <responsive-image src="jossafossa.jpg" alt="Joost Hobma" />
-              </picture>
+              <bubble-image :sources="data.images"></bubble-image>
             </div>
             <div class="header__content hor-center">
               <h1>{{ data.name }}</h1>
               <div class="key-value">
                 <div>{{ data.linksLabel }}</div>
 
-                <a v-for="link in data.links" :href="link.url" class="marked">
+                <a v-for="link in data.links" :href="link.url" class="button">
                   {{ link.label }}
                 </a>
               </div>
