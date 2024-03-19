@@ -48,4 +48,7 @@ body {
   height: 100dvh;
   overflow: auto;
   scroll-behavior: smooth;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
