@@ -26,10 +26,6 @@ export default {
       value: "joosthobma@gmail.com",
     },
     {
-      label: "Telefoon",
-      value: "+31 612631823",
-    },
-    {
       label: "Adres",
       value: "Groningen",
     },
