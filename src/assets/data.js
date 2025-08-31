@@ -23,7 +23,7 @@ export default {
   contactInfo: [
     {
       label: "Email",
-      value: "joosthobma@gmail.com",
+      value: "info@jossafossa.nl",
     },
     {
       label: "Adres",
